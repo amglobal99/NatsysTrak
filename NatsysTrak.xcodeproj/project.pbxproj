@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		043790131EE6FA04009D651A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790121EE6FA04009D651A /* AppDelegate.swift */; };
+		043790151EE6FA04009D651A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790141EE6FA04009D651A /* ViewController.swift */; };
+		043790181EE6FA05009D651A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043790161EE6FA05009D651A /* Main.storyboard */; };
+		0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */; };
+		0437901D1EE6FA05009D651A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0437901C1EE6FA05009D651A /* Assets.xcassets */; };
+		043790201EE6FA05009D651A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */; };
+		0437902B1EE6FA05009D651A /* NatsysTrakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437902A1EE6FA05009D651A /* NatsysTrakTests.swift */; };
+		043790361EE6FA05009D651A /* NatsysTrakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790351EE6FA05009D651A /* NatsysTrakUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		043790271EE6FA05009D651A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043790071EE6FA04009D651A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0437900E1EE6FA04009D651A;
+			remoteInfo = NatsysTrak;
+		};
+		043790321EE6FA05009D651A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043790071EE6FA04009D651A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0437900E1EE6FA04009D651A;
+			remoteInfo = NatsysTrak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0437900F1EE6FA04009D651A /* NatsysTrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatsysTrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		043790121EE6FA04009D651A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		043790141EE6FA04009D651A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		043790171EE6FA05009D651A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0437901A1EE6FA05009D651A /* NatsysTrak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NatsysTrak.xcdatamodel; sourceTree = "<group>"; };
+		0437901C1EE6FA05009D651A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0437901F1EE6FA05009D651A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		043790211EE6FA05009D651A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043790261EE6FA05009D651A /* NatsysTrakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatsysTrakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0437902A1EE6FA05009D651A /* NatsysTrakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatsysTrakTests.swift; sourceTree = "<group>"; };
+		0437902C1EE6FA05009D651A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043790311EE6FA05009D651A /* NatsysTrakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatsysTrakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043790351EE6FA05009D651A /* NatsysTrakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatsysTrakUITests.swift; sourceTree = "<group>"; };
+		043790371EE6FA05009D651A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0437900C1EE6FA04009D651A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043790231EE6FA05009D651A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0437902E1EE6FA05009D651A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		043790061EE6FA04009D651A = {
+			isa = PBXGroup;
+			children = (
+				043790111EE6FA04009D651A /* NatsysTrak */,
+				043790291EE6FA05009D651A /* NatsysTrakTests */,
+				043790341EE6FA05009D651A /* NatsysTrakUITests */,
+				043790101EE6FA04009D651A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		043790101EE6FA04009D651A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0437900F1EE6FA04009D651A /* NatsysTrak.app */,
+				043790261EE6FA05009D651A /* NatsysTrakTests.xctest */,
+				043790311EE6FA05009D651A /* NatsysTrakUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		043790111EE6FA04009D651A /* NatsysTrak */ = {
+			isa = PBXGroup;
+			children = (
+				043790121EE6FA04009D651A /* AppDelegate.swift */,
+				043790141EE6FA04009D651A /* ViewController.swift */,
+				043790161EE6FA05009D651A /* Main.storyboard */,
+				0437901C1EE6FA05009D651A /* Assets.xcassets */,
+				0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */,
+				043790211EE6FA05009D651A /* Info.plist */,
+				043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */,
+			);
+			path = NatsysTrak;
+			sourceTree = "<group>";
+		};
+		043790291EE6FA05009D651A /* NatsysTrakTests */ = {
+			isa = PBXGroup;
+			children = (
+				0437902A1EE6FA05009D651A /* NatsysTrakTests.swift */,
+				0437902C1EE6FA05009D651A /* Info.plist */,
+			);
+			path = NatsysTrakTests;
+			sourceTree = "<group>";
+		};
+		043790341EE6FA05009D651A /* NatsysTrakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				043790351EE6FA05009D651A /* NatsysTrakUITests.swift */,
+				043790371EE6FA05009D651A /* Info.plist */,
+			);
+			path = NatsysTrakUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0437900E1EE6FA04009D651A /* NatsysTrak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0437903A1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrak" */;
+			buildPhases = (
+				0437900B1EE6FA04009D651A /* Sources */,
+				0437900C1EE6FA04009D651A /* Frameworks */,
+				0437900D1EE6FA04009D651A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NatsysTrak;
+			productName = NatsysTrak;
+			productReference = 0437900F1EE6FA04009D651A /* NatsysTrak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		043790251EE6FA05009D651A /* NatsysTrakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0437903D1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakTests" */;
+			buildPhases = (
+				043790221EE6FA05009D651A /* Sources */,
+				043790231EE6FA05009D651A /* Frameworks */,
+				043790241EE6FA05009D651A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043790281EE6FA05009D651A /* PBXTargetDependency */,
+			);
+			name = NatsysTrakTests;
+			productName = NatsysTrakTests;
+			productReference = 043790261EE6FA05009D651A /* NatsysTrakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		043790301EE6FA05009D651A /* NatsysTrakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043790401EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakUITests" */;
+			buildPhases = (
+				0437902D1EE6FA05009D651A /* Sources */,
+				0437902E1EE6FA05009D651A /* Frameworks */,
+				0437902F1EE6FA05009D651A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043790331EE6FA05009D651A /* PBXTargetDependency */,
+			);
+			name = NatsysTrakUITests;
+			productName = NatsysTrakUITests;
+			productReference = 043790311EE6FA05009D651A /* NatsysTrakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		043790071EE6FA04009D651A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Natsys International";
+				TargetAttributes = {
+					0437900E1EE6FA04009D651A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7TC98CE9GK;
+						ProvisioningStyle = Automatic;
+					};
+					043790251EE6FA05009D651A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7TC98CE9GK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0437900E1EE6FA04009D651A;
+					};
+					043790301EE6FA05009D651A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7TC98CE9GK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0437900E1EE6FA04009D651A;
+					};
+				};
+			};
+			buildConfigurationList = 0437900A1EE6FA04009D651A /* Build configuration list for PBXProject "NatsysTrak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 043790061EE6FA04009D651A;
+			productRefGroup = 043790101EE6FA04009D651A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0437900E1EE6FA04009D651A /* NatsysTrak */,
+				043790251EE6FA05009D651A /* NatsysTrakTests */,
+				043790301EE6FA05009D651A /* NatsysTrakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0437900D1EE6FA04009D651A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043790201EE6FA05009D651A /* LaunchScreen.storyboard in Resources */,
+				0437901D1EE6FA05009D651A /* Assets.xcassets in Resources */,
+				043790181EE6FA05009D651A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043790241EE6FA05009D651A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0437902F1EE6FA05009D651A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0437900B1EE6FA04009D651A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043790151EE6FA04009D651A /* ViewController.swift in Sources */,
+				043790131EE6FA04009D651A /* AppDelegate.swift in Sources */,
+				0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043790221EE6FA05009D651A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0437902B1EE6FA05009D651A /* NatsysTrakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0437902D1EE6FA05009D651A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043790361EE6FA05009D651A /* NatsysTrakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		043790281EE6FA05009D651A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0437900E1EE6FA04009D651A /* NatsysTrak */;
+			targetProxy = 043790271EE6FA05009D651A /* PBXContainerItemProxy */;
+		};
+		043790331EE6FA05009D651A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0437900E1EE6FA04009D651A /* NatsysTrak */;
+			targetProxy = 043790321EE6FA05009D651A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		043790161EE6FA05009D651A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043790171EE6FA05009D651A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0437901F1EE6FA05009D651A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		043790381EE6FA05009D651A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		043790391EE6FA05009D651A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0437903B1EE6FA05009D651A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7TC98CE9GK;
+				INFOPLIST_FILE = NatsysTrak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natsys.NatsysTrak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0437903C1EE6FA05009D651A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7TC98CE9GK;
+				INFOPLIST_FILE = NatsysTrak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natsys.NatsysTrak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0437903E1EE6FA05009D651A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7TC98CE9GK;
+				INFOPLIST_FILE = NatsysTrakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natsys.NatsysTrakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NatsysTrak.app/NatsysTrak";
+			};
+			name = Debug;
+		};
+		0437903F1EE6FA05009D651A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7TC98CE9GK;
+				INFOPLIST_FILE = NatsysTrakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natsys.NatsysTrakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NatsysTrak.app/NatsysTrak";
+			};
+			name = Release;
+		};
+		043790411EE6FA05009D651A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7TC98CE9GK;
+				INFOPLIST_FILE = NatsysTrakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natsys.NatsysTrakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NatsysTrak;
+			};
+			name = Debug;
+		};
+		043790421EE6FA05009D651A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7TC98CE9GK;
+				INFOPLIST_FILE = NatsysTrakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natsys.NatsysTrakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NatsysTrak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0437900A1EE6FA04009D651A /* Build configuration list for PBXProject "NatsysTrak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043790381EE6FA05009D651A /* Debug */,
+				043790391EE6FA05009D651A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0437903A1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0437903B1EE6FA05009D651A /* Debug */,
+				0437903C1EE6FA05009D651A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0437903D1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0437903E1EE6FA05009D651A /* Debug */,
+				0437903F1EE6FA05009D651A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		043790401EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043790411EE6FA05009D651A /* Debug */,
+				043790421EE6FA05009D651A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0437901A1EE6FA05009D651A /* NatsysTrak.xcdatamodel */,
+			);
+			currentVersion = 0437901A1EE6FA05009D651A /* NatsysTrak.xcdatamodel */;
+			path = NatsysTrak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 043790071EE6FA04009D651A /* Project object */;
+}
