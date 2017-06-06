@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>dev3.blueshift.com</key>
+			<string></string>
+		</dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App needs Photo Library so user can select photos</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App needs location for best performance</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App needs camera to scan</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App needs Bluetooth to communiate with external hardware</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

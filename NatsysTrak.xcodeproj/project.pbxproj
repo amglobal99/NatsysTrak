@@ -49,6 +49,7 @@
 		043790311EE6FA05009D651A /* NatsysTrakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatsysTrakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043790351EE6FA05009D651A /* NatsysTrakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatsysTrakUITests.swift; sourceTree = "<group>"; };
 		043790371EE6FA05009D651A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043790431EE6FD43009D651A /* NatsysTrak-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NatsysTrak-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		043790061EE6FA04009D651A = {
 			isa = PBXGroup;
 			children = (
+				043790431EE6FD43009D651A /* NatsysTrak-Bridging-Header.h */,
 				043790111EE6FA04009D651A /* NatsysTrak */,
 				043790291EE6FA05009D651A /* NatsysTrakTests */,
 				043790341EE6FA05009D651A /* NatsysTrakUITests */,
