@@ -1,0 +1,6 @@
+framework module Pods_NatsysTrakTests {
+  umbrella header "Pods-NatsysTrakTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

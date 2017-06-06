@@ -15,6 +15,9 @@
 		043790201EE6FA05009D651A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */; };
 		0437902B1EE6FA05009D651A /* NatsysTrakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437902A1EE6FA05009D651A /* NatsysTrakTests.swift */; };
 		043790361EE6FA05009D651A /* NatsysTrakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790351EE6FA05009D651A /* NatsysTrakUITests.swift */; };
+		7ABA8D6078FE55B8AEF47112 /* Pods_NatsysTrakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A602208DCAF8086D961C91C7 /* Pods_NatsysTrakUITests.framework */; };
+		8E0C03E794B9082C05028BAE /* Pods_NatsysTrak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918AEDACD36B0AE74EB20F04 /* Pods_NatsysTrak.framework */; };
+		B0745F2E987CEB6F499461CC /* Pods_NatsysTrakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4958793DE5E602BAFEFE78F /* Pods_NatsysTrakTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,15 @@
 		043790351EE6FA05009D651A /* NatsysTrakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatsysTrakUITests.swift; sourceTree = "<group>"; };
 		043790371EE6FA05009D651A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043790431EE6FD43009D651A /* NatsysTrak-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NatsysTrak-Bridging-Header.h"; sourceTree = "<group>"; };
+		0CD198DF8BE1C37F333608F2 /* Pods-NatsysTrak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrak/Pods-NatsysTrak.debug.xcconfig"; sourceTree = "<group>"; };
+		5C7E327C834CB3D1605CD155 /* Pods-NatsysTrakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakUITests/Pods-NatsysTrakUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6DEAC79D8CF127B56F5DEAC3 /* Pods-NatsysTrakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakTests/Pods-NatsysTrakTests.release.xcconfig"; sourceTree = "<group>"; };
+		918AEDACD36B0AE74EB20F04 /* Pods_NatsysTrak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatsysTrak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BE01BBCD1ADB4EF2BBD162 /* Pods-NatsysTrakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakUITests/Pods-NatsysTrakUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A602208DCAF8086D961C91C7 /* Pods_NatsysTrakUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatsysTrakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36E41786BEE486727A74DF7 /* Pods-NatsysTrakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakTests/Pods-NatsysTrakTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C55ACA09CB6CB53CF91EA276 /* Pods-NatsysTrak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrak.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrak/Pods-NatsysTrak.release.xcconfig"; sourceTree = "<group>"; };
+		E4958793DE5E602BAFEFE78F /* Pods_NatsysTrakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatsysTrakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0C03E794B9082C05028BAE /* Pods_NatsysTrak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0745F2E987CEB6F499461CC /* Pods_NatsysTrakTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABA8D6078FE55B8AEF47112 /* Pods_NatsysTrakUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				043790291EE6FA05009D651A /* NatsysTrakTests */,
 				043790341EE6FA05009D651A /* NatsysTrakUITests */,
 				043790101EE6FA04009D651A /* Products */,
+				99897F894462C1D687DBA7C5 /* Pods */,
+				330D767CB0A19470C960CBBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +147,29 @@
 			path = NatsysTrakUITests;
 			sourceTree = "<group>";
 		};
+		330D767CB0A19470C960CBBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				918AEDACD36B0AE74EB20F04 /* Pods_NatsysTrak.framework */,
+				E4958793DE5E602BAFEFE78F /* Pods_NatsysTrakTests.framework */,
+				A602208DCAF8086D961C91C7 /* Pods_NatsysTrakUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99897F894462C1D687DBA7C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CD198DF8BE1C37F333608F2 /* Pods-NatsysTrak.debug.xcconfig */,
+				C55ACA09CB6CB53CF91EA276 /* Pods-NatsysTrak.release.xcconfig */,
+				C36E41786BEE486727A74DF7 /* Pods-NatsysTrakTests.debug.xcconfig */,
+				6DEAC79D8CF127B56F5DEAC3 /* Pods-NatsysTrakTests.release.xcconfig */,
+				A3BE01BBCD1ADB4EF2BBD162 /* Pods-NatsysTrakUITests.debug.xcconfig */,
+				5C7E327C834CB3D1605CD155 /* Pods-NatsysTrakUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0437903A1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrak" */;
 			buildPhases = (
+				413DDF376E4CF995E7D1F87C /* [CP] Check Pods Manifest.lock */,
 				0437900B1EE6FA04009D651A /* Sources */,
 				0437900C1EE6FA04009D651A /* Frameworks */,
 				0437900D1EE6FA04009D651A /* Resources */,
+				F49A8061A04869C3042CA0B7 /* [CP] Embed Pods Frameworks */,
+				FF9F979D0BFAD6651D7D42DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0437903D1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakTests" */;
 			buildPhases = (
+				CC1B5B5FF91FC9665F236A64 /* [CP] Check Pods Manifest.lock */,
 				043790221EE6FA05009D651A /* Sources */,
 				043790231EE6FA05009D651A /* Frameworks */,
 				043790241EE6FA05009D651A /* Resources */,
+				91EE6DA04020463D2839474B /* [CP] Embed Pods Frameworks */,
+				78650EA1110831A35FC1072E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043790401EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakUITests" */;
 			buildPhases = (
+				0F86B5C21D8487D4C1C7E803 /* [CP] Check Pods Manifest.lock */,
 				0437902D1EE6FA05009D651A /* Sources */,
 				0437902E1EE6FA05009D651A /* Frameworks */,
 				0437902F1EE6FA05009D651A /* Resources */,
+				64B71FC8C9C37F5AB6E26449 /* [CP] Embed Pods Frameworks */,
+				2DDEE9D48D8F19084B9F004B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +310,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F86B5C21D8487D4C1C7E803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DDEE9D48D8F19084B9F004B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatsysTrakUITests/Pods-NatsysTrakUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		413DDF376E4CF995E7D1F87C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64B71FC8C9C37F5AB6E26449 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatsysTrakUITests/Pods-NatsysTrakUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78650EA1110831A35FC1072E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatsysTrakTests/Pods-NatsysTrakTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91EE6DA04020463D2839474B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatsysTrakTests/Pods-NatsysTrakTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1B5B5FF91FC9665F236A64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F49A8061A04869C3042CA0B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatsysTrak/Pods-NatsysTrak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9F979D0BFAD6651D7D42DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatsysTrak/Pods-NatsysTrak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0437900B1EE6FA04009D651A /* Sources */ = {
@@ -421,6 +608,7 @@
 		};
 		0437903B1EE6FA05009D651A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD198DF8BE1C37F333608F2 /* Pods-NatsysTrak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7TC98CE9GK;
@@ -434,6 +622,7 @@
 		};
 		0437903C1EE6FA05009D651A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55ACA09CB6CB53CF91EA276 /* Pods-NatsysTrak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7TC98CE9GK;
@@ -447,8 +636,9 @@
 		};
 		0437903E1EE6FA05009D651A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C36E41786BEE486727A74DF7 /* Pods-NatsysTrakTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 7TC98CE9GK;
 				INFOPLIST_FILE = NatsysTrakTests/Info.plist;
@@ -462,8 +652,9 @@
 		};
 		0437903F1EE6FA05009D651A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEAC79D8CF127B56F5DEAC3 /* Pods-NatsysTrakTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 7TC98CE9GK;
 				INFOPLIST_FILE = NatsysTrakTests/Info.plist;
@@ -477,8 +668,9 @@
 		};
 		043790411EE6FA05009D651A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3BE01BBCD1ADB4EF2BBD162 /* Pods-NatsysTrakUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = 7TC98CE9GK;
 				INFOPLIST_FILE = NatsysTrakUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -491,8 +683,9 @@
 		};
 		043790421EE6FA05009D651A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7E327C834CB3D1605CD155 /* Pods-NatsysTrakUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = 7TC98CE9GK;
 				INFOPLIST_FILE = NatsysTrakUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -522,6 +715,7 @@
 				0437903C1EE6FA05009D651A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0437903D1EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +724,7 @@
 				0437903F1EE6FA05009D651A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		043790401EE6FA05009D651A /* Build configuration list for PBXNativeTarget "NatsysTrakUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +733,7 @@
 				043790421EE6FA05009D651A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
