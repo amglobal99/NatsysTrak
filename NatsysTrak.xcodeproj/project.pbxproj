@@ -15,6 +15,9 @@
 		043790201EE6FA05009D651A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */; };
 		0437902B1EE6FA05009D651A /* NatsysTrakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437902A1EE6FA05009D651A /* NatsysTrakTests.swift */; };
 		043790361EE6FA05009D651A /* NatsysTrakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790351EE6FA05009D651A /* NatsysTrakUITests.swift */; };
+		04CBA5451EE76D4000D5C17C /* ExtensionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5441EE76D4000D5C17C /* ExtensionArray.swift */; };
+		04CBA5481EE76D7B00D5C17C /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5471EE76D7B00D5C17C /* ExtensionString.swift */; };
+		04CBA54A1EE76DA700D5C17C /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5491EE76DA700D5C17C /* ExtensionDictionary.swift */; };
 		7ABA8D6078FE55B8AEF47112 /* Pods_NatsysTrakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A602208DCAF8086D961C91C7 /* Pods_NatsysTrakUITests.framework */; };
 		8E0C03E794B9082C05028BAE /* Pods_NatsysTrak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918AEDACD36B0AE74EB20F04 /* Pods_NatsysTrak.framework */; };
 		B0745F2E987CEB6F499461CC /* Pods_NatsysTrakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4958793DE5E602BAFEFE78F /* Pods_NatsysTrakTests.framework */; };
@@ -53,6 +56,9 @@
 		043790351EE6FA05009D651A /* NatsysTrakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatsysTrakUITests.swift; sourceTree = "<group>"; };
 		043790371EE6FA05009D651A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043790431EE6FD43009D651A /* NatsysTrak-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NatsysTrak-Bridging-Header.h"; sourceTree = "<group>"; };
+		04CBA5441EE76D4000D5C17C /* ExtensionArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionArray.swift; sourceTree = "<group>"; };
+		04CBA5471EE76D7B00D5C17C /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		04CBA5491EE76DA700D5C17C /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		0CD198DF8BE1C37F333608F2 /* Pods-NatsysTrak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrak/Pods-NatsysTrak.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7E327C834CB3D1605CD155 /* Pods-NatsysTrakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakUITests/Pods-NatsysTrakUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6DEAC79D8CF127B56F5DEAC3 /* Pods-NatsysTrakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakTests/Pods-NatsysTrakTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */,
 				043790211EE6FA05009D651A /* Info.plist */,
 				043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */,
+				04CBA5461EE76D5500D5C17C /* Extensions */,
 			);
 			path = NatsysTrak;
 			sourceTree = "<group>";
@@ -145,6 +152,16 @@
 				043790371EE6FA05009D651A /* Info.plist */,
 			);
 			path = NatsysTrakUITests;
+			sourceTree = "<group>";
+		};
+		04CBA5461EE76D5500D5C17C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04CBA5441EE76D4000D5C17C /* ExtensionArray.swift */,
+				04CBA5471EE76D7B00D5C17C /* ExtensionString.swift */,
+				04CBA5491EE76DA700D5C17C /* ExtensionDictionary.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		330D767CB0A19470C960CBBD /* Frameworks */ = {
@@ -454,9 +471,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CBA5481EE76D7B00D5C17C /* ExtensionString.swift in Sources */,
 				043790151EE6FA04009D651A /* ViewController.swift in Sources */,
 				043790131EE6FA04009D651A /* AppDelegate.swift in Sources */,
 				0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */,
+				04CBA5451EE76D4000D5C17C /* ExtensionArray.swift in Sources */,
+				04CBA54A1EE76DA700D5C17C /* ExtensionDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
