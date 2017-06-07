@@ -14,6 +14,8 @@ import Alamofire
 import SwiftyJSON
 
 
+/*
+
 // MARK: - Protocols
 
 // Define empty protocol
@@ -220,3 +222,8 @@ extension JsonConvertible  {
   
   
 }   // end extension
+ 
+ 
+ 
+ 
+ */
