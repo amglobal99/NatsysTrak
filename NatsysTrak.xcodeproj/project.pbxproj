@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FD31EE866080069F8BD /* GlobalFunctions.swift */; };
+		04252FD91EE869840069F8BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04252FD81EE869840069F8BD /* Settings.bundle */; };
 		043790131EE6FA04009D651A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790121EE6FA04009D651A /* AppDelegate.swift */; };
 		043790151EE6FA04009D651A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790141EE6FA04009D651A /* ViewController.swift */; };
 		043790181EE6FA05009D651A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043790161EE6FA05009D651A /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04252FD31EE866080069F8BD /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		04252FD81EE869840069F8BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0437900F1EE6FA04009D651A /* NatsysTrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatsysTrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043790121EE6FA04009D651A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043790141EE6FA04009D651A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04252FD51EE866190069F8BD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04CBA5571EE7709C00D5C17C /* Reachability.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		04252FD61EE868220069F8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				043790141EE6FA04009D651A /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		04252FD71EE8682E0069F8BD /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */,
+				043790161EE6FA05009D651A /* Main.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
 		043790061EE6FA04009D651A = {
 			isa = PBXGroup;
 			children = (
@@ -135,15 +164,16 @@
 			isa = PBXGroup;
 			children = (
 				043790121EE6FA04009D651A /* AppDelegate.swift */,
-				043790141EE6FA04009D651A /* ViewController.swift */,
-				043790161EE6FA05009D651A /* Main.storyboard */,
+				04252FD61EE868220069F8BD /* Controllers */,
+				04252FD71EE8682E0069F8BD /* StoryBoards */,
 				0437901C1EE6FA05009D651A /* Assets.xcassets */,
-				0437901E1EE6FA05009D651A /* LaunchScreen.storyboard */,
 				043790211EE6FA05009D651A /* Info.plist */,
 				043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */,
 				04CBA5461EE76D5500D5C17C /* Extensions */,
 				04CBA5511EE76ECD00D5C17C /* Protocols */,
+				04252FD51EE866190069F8BD /* Utils */,
 				04CBA5521EE76EDD00D5C17C /* Globals */,
+				04252FD81EE869840069F8BD /* Settings.bundle */,
 			);
 			path = NatsysTrak;
 			sourceTree = "<group>";
@@ -190,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				04CBA5551EE76F9700D5C17C /* GlobalConstants.swift */,
-				04CBA5571EE7709C00D5C17C /* Reachability.swift */,
+				04252FD31EE866080069F8BD /* GlobalFunctions.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -337,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04252FD91EE869840069F8BD /* Settings.bundle in Resources */,
 				043790201EE6FA05009D651A /* LaunchScreen.storyboard in Resources */,
 				0437901D1EE6FA05009D651A /* Assets.xcassets in Resources */,
 				043790181EE6FA05009D651A /* Main.storyboard in Resources */,
@@ -504,6 +535,7 @@
 			files = (
 				04CBA5481EE76D7B00D5C17C /* ExtensionString.swift in Sources */,
 				04CBA5581EE7709C00D5C17C /* Reachability.swift in Sources */,
+				04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */,
 				04CBA54E1EE76E6D00D5C17C /* ProtocolUtils.swift in Sources */,
 				043790151EE6FA04009D651A /* ViewController.swift in Sources */,
 				043790131EE6FA04009D651A /* AppDelegate.swift in Sources */,
