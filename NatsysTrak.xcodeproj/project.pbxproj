@@ -11,6 +11,13 @@
 		04252FD91EE869840069F8BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04252FD81EE869840069F8BD /* Settings.bundle */; };
 		04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDA1EE8824E0069F8BD /* GatewayController.swift */; };
 		04252FDE1EE8876A0069F8BD /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDD1EE8876A0069F8BD /* LoggerFactory.swift */; };
+		04252FE01EE895D90069F8BD /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDF1EE895D90069F8BD /* Login.swift */; };
+		04252FE21EE8964D0069F8BD /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE11EE8964D0069F8BD /* MainController.swift */; };
+		04252FE41EE899CE0069F8BD /* ExtensionNSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE31EE899CE0069F8BD /* ExtensionNSDecimalNumber.swift */; };
+		04252FE61EE899FC0069F8BD /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE51EE899FC0069F8BD /* ExtensionTextField.swift */; };
+		04252FE81EE89A1A0069F8BD /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */; };
+		04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE91EE89A580069F8BD /* ExtensionView.swift */; };
+		04252FEC1EE89A8A0069F8BD /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */; };
 		043790131EE6FA04009D651A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790121EE6FA04009D651A /* AppDelegate.swift */; };
 		043790181EE6FA05009D651A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043790161EE6FA05009D651A /* Main.storyboard */; };
 		0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */; };
@@ -54,6 +61,13 @@
 		04252FDA1EE8824E0069F8BD /* GatewayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayController.swift; sourceTree = "<group>"; };
 		04252FDC1EE885570069F8BD /* NatsysTrak-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NatsysTrak-Prefix.pch"; sourceTree = "<group>"; };
 		04252FDD1EE8876A0069F8BD /* LoggerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFactory.swift; sourceTree = "<group>"; };
+		04252FDF1EE895D90069F8BD /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		04252FE11EE8964D0069F8BD /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		04252FE31EE899CE0069F8BD /* ExtensionNSDecimalNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNSDecimalNumber.swift; sourceTree = "<group>"; };
+		04252FE51EE899FC0069F8BD /* ExtensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
+		04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		04252FE91EE89A580069F8BD /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		0437900F1EE6FA04009D651A /* NatsysTrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatsysTrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043790121EE6FA04009D651A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043790171EE6FA05009D651A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				04252FDA1EE8824E0069F8BD /* GatewayController.swift */,
+				04252FDF1EE895D90069F8BD /* Login.swift */,
+				04252FE11EE8964D0069F8BD /* MainController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +224,11 @@
 				04CBA5471EE76D7B00D5C17C /* ExtensionString.swift */,
 				04CBA5491EE76DA700D5C17C /* ExtensionDictionary.swift */,
 				04CBA5531EE76F1900D5C17C /* ExtensionEurekaRow.swift */,
+				04252FE31EE899CE0069F8BD /* ExtensionNSDecimalNumber.swift */,
+				04252FE51EE899FC0069F8BD /* ExtensionTextField.swift */,
+				04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */,
+				04252FE91EE89A580069F8BD /* ExtensionView.swift */,
+				04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -541,16 +562,23 @@
 				04CBA5481EE76D7B00D5C17C /* ExtensionString.swift in Sources */,
 				04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */,
 				04CBA5581EE7709C00D5C17C /* Reachability.swift in Sources */,
+				04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */,
 				04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */,
+				04252FE21EE8964D0069F8BD /* MainController.swift in Sources */,
 				04CBA54E1EE76E6D00D5C17C /* ProtocolUtils.swift in Sources */,
 				043790131EE6FA04009D651A /* AppDelegate.swift in Sources */,
 				0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */,
+				04252FE01EE895D90069F8BD /* Login.swift in Sources */,
 				04252FDE1EE8876A0069F8BD /* LoggerFactory.swift in Sources */,
 				04CBA5561EE76F9700D5C17C /* GlobalConstants.swift in Sources */,
 				04CBA54C1EE76E3300D5C17C /* ProtocolJsonConvertible.swift in Sources */,
 				04CBA5541EE76F1900D5C17C /* ExtensionEurekaRow.swift in Sources */,
+				04252FE81EE89A1A0069F8BD /* ExtensionUIColor.swift in Sources */,
 				04CBA5451EE76D4000D5C17C /* ExtensionArray.swift in Sources */,
+				04252FEC1EE89A8A0069F8BD /* ExtensionViewController.swift in Sources */,
 				04CBA54A1EE76DA700D5C17C /* ExtensionDictionary.swift in Sources */,
+				04252FE41EE899CE0069F8BD /* ExtensionNSDecimalNumber.swift in Sources */,
+				04252FE61EE899FC0069F8BD /* ExtensionTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

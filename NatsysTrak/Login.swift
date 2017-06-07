@@ -1,5 +1,5 @@
 //
-//  GatewayController.swift
+//  Login.swift
 //  NatsysTrak
 //
 //  Created by Jack Patil on 6/7/17.
@@ -10,20 +10,13 @@ import Foundation
 import UIKit
 
 
-class GatewayController: UIViewController {
+
+class Login: UIViewController {
+  
   
   override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    // check if setup or login is needed. If yes, segue to Login controller.
-    
-    
-    
-    
-    
+    //
   }
-
-  
   
   
   

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome-->
+        <!--Gateway-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GatewayController" customModule="NatsysTrak" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,22 +22,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="6Aw-bo-7pm"/>
+                    <navigationItem key="navigationItem" title="Gateway" id="6Aw-bo-7pm"/>
+                    <connections>
+                        <segue destination="izg-5F-R2N" kind="presentation" id="Yhr-fM-5Ec"/>
+                        <segue destination="DJE-j5-3Cq" kind="presentation" id="l3L-Gj-Iz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834" y="475"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="iF4-Hz-pDy">
+            <objects>
+                <viewController id="DJE-j5-3Cq" customClass="Login" customModule="NatsysTrak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4kp-Ud-co2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zhb-E4-TWC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TtH-a9-n3j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3Q-mb-Cu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="-83"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="oFe-9d-6yJ">
+            <objects>
+                <viewController id="izg-5F-R2N" customClass="MainController" customModule="NatsysTrak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YND-mJ-Pf5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dgr-NQ-EHj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oEh-d4-FCU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kop-Nh-sdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="870"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BeF-B0-6Q1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fhs-v0-fZ2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Fhs-v0-fZ2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ww-I2-tHt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7rt-dO-M7K">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Esp-4P-ZX1"/>
                     </connections>
