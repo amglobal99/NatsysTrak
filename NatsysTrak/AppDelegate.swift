@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import CocoaLumberjack
+
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let defaults = UserDefaults.standard
     defaults.set(true, forKey: "enableRotation")
+    
+    // Initialize logger
+    LoggerFactory.initLogging()
+
+    
+    DDLogVerbose("AppDelegate: didFinishlaunchingWithOptions")
+    
     
     
     return true

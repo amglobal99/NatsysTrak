@@ -1,25 +1,30 @@
 //
-//  ViewController.swift
+//  GatewayController.swift
 //  NatsysTrak
 //
-//  Created by Jack Patil on 6/6/17.
+//  Created by Jack Patil on 6/7/17.
 //  Copyright © 2017 Natsys International. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
 
+class GatewayController: UIViewController {
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+    
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
+  
+  
+  
+  
+  
 }
-
