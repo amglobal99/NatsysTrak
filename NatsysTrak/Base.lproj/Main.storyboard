@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,17 +21,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natsysTrak" translatesAutoresizingMaskIntoConstraints="NO" id="NVp-z9-MTb">
+                                <rect key="frame" x="66" y="141" width="241" height="242"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NVp-z9-MTb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="H3i-yW-5ZA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NVp-z9-MTb" secondAttribute="bottom" constant="240" id="MWw-lb-pLj"/>
+                            <constraint firstItem="NVp-z9-MTb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Xgx-4y-XH4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NVp-z9-MTb" secondAttribute="trailing" constant="52" id="n4I-AY-NXC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gateway" id="6Aw-bo-7pm"/>
                     <connections>
-                        <segue destination="izg-5F-R2N" kind="presentation" id="Yhr-fM-5Ec"/>
-                        <segue destination="DJE-j5-3Cq" kind="presentation" id="l3L-Gj-Iz3"/>
+                        <segue destination="izg-5F-R2N" kind="presentation" identifier="main" id="Yhr-fM-5Ec"/>
+                        <segue destination="DJE-j5-3Cq" kind="presentation" identifier="login" id="l3L-Gj-Iz3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="475"/>
+            <point key="canvasLocation" x="832.79999999999995" y="474.51274362818594"/>
         </scene>
         <!--Login-->
         <scene sceneID="iF4-Hz-pDy">
@@ -91,4 +103,7 @@
             <point key="canvasLocation" x="-82" y="475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="natsysTrak" width="1024" height="1024"/>
+    </resources>
 </document>

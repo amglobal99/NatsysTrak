@@ -9,36 +9,36 @@
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
+			<key>TrueValue</key>
+			<true/>
+			<key>FalseValue</key>
+			<false/>
 			<key>Title</key>
-			<string>Rotation Lock</string>
+			<string>Rotaion Lock</string>
 			<key>Key</key>
 			<string>enableRotation</string>
 			<key>DefaultValue</key>
 			<true/>
-			<key>FalseValue</key>
-			<string>YES</string>
-			<key>TrueValue</key>
-			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Environment</string>
+			<key>Key</key>
+			<string>environment</string>
 			<key>Values</key>
 			<array>
-				<integer>0</integer>
-				<integer>1</integer>
-				<integer>2</integer>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
 			</array>
 			<key>Titles</key>
 			<array>
 				<string>DEV</string>
-				<string>DEMO</string>
+				<string>STAGE</string>
 				<string>PROD</string>
 			</array>
-			<key>Title</key>
-			<string>Server</string>
-			<key>Key</key>
-			<string>server</string>
 			<key>DefaultValue</key>
 			<string>PROD</string>
 		</dict>

@@ -23,15 +23,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natsysTrak" translatesAutoresizingMaskIntoConstraints="NO" id="o7C-zM-167">
-                                <rect key="frame" x="67" y="137" width="240" height="245"/>
+                                <rect key="frame" x="66" y="140" width="241" height="242"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="o7C-zM-167" secondAttribute="trailing" constant="52" id="Bf5-2h-azl"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="o7C-zM-167" secondAttribute="bottom" constant="285" id="IkN-mP-2Zr"/>
-                            <constraint firstItem="o7C-zM-167" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="51" id="SzD-dZ-glD"/>
-                            <constraint firstItem="o7C-zM-167" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="117" id="TeV-9j-KcB"/>
+                            <constraint firstItem="o7C-zM-167" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="50" id="SzD-dZ-glD"/>
+                            <constraint firstItem="o7C-zM-167" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="120" id="TeV-9j-KcB"/>
                         </constraints>
                     </view>
                 </viewController>

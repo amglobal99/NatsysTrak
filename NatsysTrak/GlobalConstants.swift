@@ -9,7 +9,7 @@
 
 import Foundation
 import Alamofire
-
+import SwiftyJSON
 
 
 typealias ClosureJSON<T> = (T) -> Void
@@ -17,41 +17,174 @@ typealias ClosureJSON<T> = (T) -> Void
 
 
 
-struct Constants {
-  
-  
-  struct AlamofireNatsysApi {
-    
-    enum AlamofireNatsysAPIError: Error {
-      case network(error: Error)
-      case apiProvidedError(reason: String)
-      case authCouldNot(reason: String)
-      case authLost(reason: String)
-      case objectSerialization(reason: String)
-      case other(reason:String)
-    }
-    
-    
-  }  // end struct
+struct GlobalConstants {
   
   
   
-  struct flickrApi {
-    
-  }
+      // MARK: - Constants
+      
+      static let companyName = "Natsys International"
+      static let companyAddress = "1808 Mountain Lake Dr GA 30339"
+      static let userDefaults = UserDefaults.standard
+      
+      static let filemgr = FileManager.default
+      static let calendar: Calendar = Calendar(identifier: .gregorian )
+      static let locale = Locale(identifier: "en_US")
+      
+      // Date Formatter
+      static let dateFormatter: DateFormatter = {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter
+      }()
   
   
+      // Session
+      static let session: URLSession = {
+        let config = URLSessionConfiguration.default
+        return URLSession(configuration: config)
+      }()
+  
+
+  
+  
+  
+  // MARK: - Configuration
   
   struct Configuration {
     
-    static let companyName = "Natsys International"
-    static let companyAddress = "1808 Mountain Lake Dr GA 30339"
     
     
+    //  This enum helps us configure everything related to our URL
+    //  This is a very flexible arrangement
     
-    
-    enum TestSite {
+    enum GistRouter: URLRequestConvertible {    // The URLRequestConvertible protocolcan be found in Alamorefire.swift
       
+      
+      static let baseURLString:String = "https://api.github.com/"
+      
+      
+      case getPublic() // GET https://api.github.com/gists/public
+      case getMyStarred() // GET https://api.github.com/gists/starred
+      case getMine() // GET https://api.github.com/gists
+      case isStarred(String) // GET https://api.github.com/gists/\(gistId)/star
+      case getAtPath(String) // GET at given path
+      case star(String) // PUT https://api.github.com/gists/\(gistId)/star
+      case unstar(String) // DELETE https://api.github.com/gists/\(gistId)/star
+      case delete(String) // DELETE https://api.github.com/gists/\(gistId)
+      case create([String: AnyObject]) // POST https://api.github.com/gists
+      
+      
+      
+      
+      func asURLRequest() throws -> URLRequest {
+        
+        var urlRequest: URLRequest
+        
+        
+        // +++++++++++++ which HTTP method ? ++++++++++++++
+        var method: Alamofire.HTTPMethod {
+          switch self {
+          case .getPublic, .getAtPath, .getMine, .getMyStarred, .isStarred:
+            return .get
+          case .star:
+            return .put
+          case .unstar, .delete:
+            return .delete
+          case .create:
+            return .post
+          }
+        }
+        
+        // ++++++++++++++++ obtain URL ++++++++++++++++++++
+        let url:URL = {
+          // build up and return the URL for each endpoint
+          let relativePath:String?
+          switch self {
+          case .getAtPath(let path):
+            // already have the full URL, so just return it
+            return Foundation.URL(string: path)!
+          case .getPublic():
+            relativePath = "gists/public"
+          case .getMyStarred:
+            relativePath = "gists/starred"
+          case .getMine():
+            relativePath = "gists"
+          case .isStarred(let id):
+            relativePath = "gists/\(id)/star"
+          case .star(let id):
+            relativePath = "gists/\(id)/star"
+          case .unstar(let id):
+            relativePath = "gists/\(id)/star"
+          case .delete(let id):
+            relativePath = "gists/\(id)"
+          case .create:
+            relativePath = "gists"
+          }
+          
+          var URL = Foundation.URL(string: GistRouter.baseURLString)!
+          if let relativePath = relativePath {
+            URL = URL.appendingPathComponent(relativePath)
+          }
+          return URL
+        }()
+        
+        
+        // ++++++++++++++ obtain params ++++++++++++++++++++++++++++++
+        let params: ([String: AnyObject]?) = {
+          switch self {
+          case .getPublic, .getAtPath, .getMyStarred, .getMine, .isStarred, .star, .unstar, .delete:
+            return nil
+          case .create(let params):
+            return params
+          }
+        }()
+        
+        
+        
+        //  +++++++++ create URLRequest object that we will  return +++++++++
+        var mutableURLRequest = URLRequest(url: url)
+        mutableURLRequest.httpMethod = method.rawValue
+        
+        
+        // Set OAuth token if we have one
+        if let token = GitHubAPIManager.sharedInstance.OAuthToken {
+          mutableURLRequest.setValue("token \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
+        
+        
+        // Set Encoding
+        let encoding = Alamofire.JSONEncoding.default
+        
+        
+        //MARK: ToDo
+        let encodedRequest =  try! encoding.encode(mutableURLRequest as URLRequestConvertible, with: params)
+        
+        
+        // +++++++  return URLRequest object +++++++++++
+        return encodedRequest
+        
+        
+      }  // end func asURLRequest
+      
+      
+      
+      
+    }   // end enum
+    
+    
+    
+    
+    
+
+    
+    
+    
+    /*
+    // We will use this to configure our URL
+    enum GistRouter {
+     
       init?(rawValue: String){
         switch rawValue{
         case "FLICKR":
@@ -68,14 +201,14 @@ struct Constants {
           return nil
         }
       }
-      
+     
       case flickr
       case github
       case bikenyc
       case google
       case typicode
-      
-      
+     
+     
       var urlString:String {
         switch self {
         case .flickr:
@@ -183,40 +316,38 @@ struct Constants {
       
       
     } // end enum
+    */
     
     
     
     
-    // MARK: - Date/Time/Calendar
-    
-    // Date Formatter
-    static let dateFormatter: DateFormatter = {
-      let formatter  = DateFormatter()
-      formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-      return formatter
-    }()
     
     
     
     
-    let filemgr = FileManager.default
-    var calendar: Calendar = Calendar(identifier: .gregorian )
-    var locale = Locale(identifier: "en_US")
+    // MARK: - Alamofire API
+    
+    struct AlamofireNatsysApi {
+      
+      enum AlamofireNatsysAPIError: Error {
+        case network(error: Error)
+        case apiProvidedError(reason: String)
+        case authCouldNot(reason: String)
+        case authLost(reason: String)
+        case objectSerialization(reason: String)
+        case other(reason:String)
+      }
+      
+      
+    }  // end struct
     
     
     
-    // MARK: - Session
+    
+
     
     
-    // Session
-    static let session: URLSession = {
-      let config = URLSessionConfiguration.default
-      return URLSession(configuration: config)
-    }()
-    
-    
-    
-  } // end struct
+  } // end struct Configuration
   
   
   
@@ -225,4 +356,6 @@ struct Constants {
   
   
   
-}  // end struct
+  
+  
+}  // end struct GlobalConstants
