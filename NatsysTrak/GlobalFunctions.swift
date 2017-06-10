@@ -16,36 +16,30 @@ import CocoaLumberjack
 class  GlobalFunctions {
   
   
-        static let sharedInstance = GlobalFunctions()
-  
-        // var connected: Bool? = true
+      static let sharedInstance = GlobalFunctions()
 
-        // Flag that tracks internet connectivity
-        var internetIsConnected:Bool = true
-        
-  
-  
+      // Flag that tracks internet connectivity
+      var internetIsConnected:Bool = true
+      
+
       /// Add a Notification observer
       static func addNotificationObserver(_ observer: AnyObject, selector: Selector, name: Notification.Name){
         removeNotificationObserver(observer, name: name)
         NotificationCenter.default.addObserver(observer, selector: selector, name: name, object: nil)
       }
   
- 
       /// Remove observer
       static func removeNotificationObserver(_ observer: AnyObject, name: Notification.Name){
         NotificationCenter.default.removeObserver(observer, name: name, object: nil)
       }
-      
-      
+  
       /// Display message to user stating connection to internet is unavailable
       static func displayNoConnectivityMessage() {
         DDLogDebug("GlobalFunctions - displayNoConnectivityMessage: Will display no connectivity message.")
         SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 18.0))
         SwiftSpinner.show(delay: 0.1, title: "Unable to contact servers, please check your internet connection and try again.")
       }
-      
-      
+  
       /// Display message to user stating site is not responding
       static func displaySiteIsDownMessage() {
         DDLogDebug("GlobalFunctions - displayNoConnectivityMessage: Will display site down message.")
@@ -53,11 +47,9 @@ class  GlobalFunctions {
         SwiftSpinner.show(delay: 0.1, title: "Unable to contact servers. Please try again later.")
       }
       
-      
-      
+  
       /// check if Internet connection is available.
       /// do this check before sending any url requests
-      
       static func isInternetConnectionAvailable() -> Bool {
         if (Network.reachability?.isConnectedToNetwork)!  {
           DDLogDebug("GlobalFunctions - isInternetConnectionAvailable:  Internet is connected")
@@ -69,26 +61,12 @@ class  GlobalFunctions {
       }
       
   
-  
-  /*
-      // Update Internet Connectivity status
-      mutating func updateConnectivityStatus (status:Bool) {
-        self.connected = status
-      }
-  
-  */
-  
-  
-  
+      // Hide the spinner
       static func hideSpinner(){
         SwiftSpinner.hide()
       }
       
-      
   
-  
-  
-      
       /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
       /// An observer has been specified in the AppDelegate method 'didFinishLaunchingWithOptions'
       
@@ -112,10 +90,6 @@ class  GlobalFunctions {
       
   
 
-  
-  
-  
-  
   
     
   

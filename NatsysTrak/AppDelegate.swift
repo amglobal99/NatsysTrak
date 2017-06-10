@@ -12,13 +12,11 @@ import CocoaLumberjack
 
 
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+  
   var window: UIWindow?
-  //let defaults = UserDefaults.standard
-
   
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -29,15 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     LoggerFactory.initLogging()
     
     // If we wanted to set default values for our settings options, then enable this.
-    // BUT if you do thta, setting will be overwroitten evry time you run the app.
+    // BUT if you do thta, setting will be overwritten every time you run the app.
     //  defaults.register(defaults: ["environment" : "0"])
     //  defaults.register(defaults: ["enableRotation" : true ] )
   
     
-    // Internet connectivity related.
-    // We'd like to be notified when app loses iNternet connectivity.
+    // Internet connectivity related. We'd like to be notified when app loses iNternet connectivity.
     // Here. we'll add a notification to inform us when connectivity changes.
-    
     do {
       Network.reachability = try Reachability()
       do {
@@ -52,18 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    // Add observer to check when internet connectivity status changes
-    //let apiClient = GlobalConstants.githubAPIManager
-    let apiClient = GlobalConstants.globalFunctions
-
-   //  NotificationCenter.default.addObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged, object: Network.reachability)
+      // Add observer to check when internet connectivity status changes
+      let observer = GlobalConstants.globalFunctions
+      GlobalFunctions.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
     
-    GlobalFunctions.addNotificationObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged)
+      return true
     
-    
-
-    
-    return true
   } // end func
 
   
@@ -76,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     
-    DDLogDebug("AppDelegate: Executing a@objc @objc pplicationWillResignActive")
+    DDLogDebug("AppDelegate: Executing applicationWillResignActive")
     
     
   }

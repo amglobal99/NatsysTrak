@@ -105,45 +105,5 @@ class GitHubAPIManager {
   
   
   
-  /*
-  func hideSpinner(){
-    SwiftSpinner.hide()
-  }
-  
-  */
-  
-  
-  /*
-  
-  /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
-  /// An observer has been specified in the AppDelegate method 'didFinishLaunchingWithOptions'
-  
-  @objc func updateConnectivityStatus (_ notification: NSNotification) {
-    
-    DDLogDebug("updateConnectivityStatus: Received notification.")
-    guard let status = Network.reachability?.status else { return }
-    switch status {
-    case .unreachable:
-      self.internetIsConnected = false
-      DDLogDebug("updateConnectivityStatus: Notified that Internet is NOT Connected")
-      GlobalFunctions.displayNoConnectivityMessage()
-    default:
-      self.internetIsConnected = true
-      DDLogDebug("updateConnectivityStatus: Notified that Internet is Connected")
-      //self.hideSpinner()
-      GlobalFunctions.hideSpinner()
-    }
-    
-  } // end func
-  
-  
-
-  
-  */
-  
-  
-  
-  
-  
   
 } // end class
