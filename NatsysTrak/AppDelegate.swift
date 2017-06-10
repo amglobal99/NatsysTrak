@@ -23,12 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-    // Initialize logger
-    LoggerFactory.initLogging()
-    
-    
     DDLogDebug("AppDelegate: Executing didFinishlaunchingWithOptions")
     
+    // Initialize logger
+    LoggerFactory.initLogging()
     
     // If we wanted to set default values for our settings options, then enable this.
     // BUT if you do thta, setting will be overwroitten evry time you run the app.
@@ -36,9 +34,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //  defaults.register(defaults: ["enableRotation" : true ] )
   
     
+    
+    // Internet connectivity related.
+    // We'd like to be notified when app loses iNternet connectivity.
+    // Here. we'll add a notification to inform us when connectivity changes.
+    
+    do {
+      Network.reachability = try Reachability()
+      do {
+        try Network.reachability?.start()
+      } catch let error as Network.Error {
+        DDLogError("Network Error: \(error) ")
+      } catch {
+        DDLogError("Error: \(error) " )
+      }
+    } catch {
+      DDLogError("Error creating Reachability object : \(error) ")
+    }
+    
+    
+    // Add observer to check when internet connectivity status changes
+    let apiClient = GlobalConstants.githubAPIManager
+    NotificationCenter.default.addObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged, object: Network.reachability)
+    
+    
+    
+    // TODO:  Use Global Function instead
+    
+    
+    
+    
     return true
-  }
+  } // end func
 
+  
   
   
   
@@ -52,6 +81,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
   }
+  
+  
+  
 
   func applicationDidEnterBackground(_ application: UIApplication) {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -61,6 +93,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
 
+  
+  
+  
   func applicationWillEnterForeground(_ application: UIApplication) {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     
@@ -68,6 +103,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
 
+  
+  
+  
   func applicationDidBecomeActive(_ application: UIApplication) {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
@@ -75,6 +113,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
 
+  
+  
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.

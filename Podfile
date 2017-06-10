@@ -12,6 +12,7 @@ pod 'PSOperations'
 pod 'SwiftyJSON'
 pod 'Eureka', '~> 2.0.1'
 pod 'CocoaLumberjack/Swift'
+pod 'SwiftSpinner'
 end
 target 'NatsysTrakTests' do
 use_frameworks!
@@ -25,6 +26,7 @@ pod 'PSOperations'
 pod 'SwiftyJSON'
 pod 'Eureka', '~> 2.0.1'
 pod 'CocoaLumberjack/Swift'
+pod 'SwiftSpinner'
 end
 target 'NatsysTrakUITests' do
 use_frameworks!
@@ -38,4 +40,5 @@ pod 'PSOperations'
 pod 'SwiftyJSON'
 pod 'Eureka', '~> 2.0.1'
 pod 'CocoaLumberjack/Swift'
+pod 'SwiftSpinner'
 end

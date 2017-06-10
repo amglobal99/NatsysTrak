@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041ED0FC1EEB24CF007C5205 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041ED0FB1EEB24CF007C5205 /* APIManager.swift */; };
+		041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */; };
 		04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FD31EE866080069F8BD /* GlobalFunctions.swift */; };
 		04252FD91EE869840069F8BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04252FD81EE869840069F8BD /* Settings.bundle */; };
 		04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDA1EE8824E0069F8BD /* GatewayController.swift */; };
@@ -57,7 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041ED0FB1EEB24CF007C5205 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIManager.swift; sourceTree = "<group>"; };
 		04252FD31EE866080069F8BD /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		04252FD81EE869840069F8BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		04252FDA1EE8824E0069F8BD /* GatewayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayController.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		041ED0FD1EEB24D4007C5205 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				041ED0FB1EEB24CF007C5205 /* APIManager.swift */,
+				041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -576,7 +576,7 @@
 				04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */,
 				04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */,
 				04252FE21EE8964D0069F8BD /* MainController.swift in Sources */,
-				041ED0FC1EEB24CF007C5205 /* APIManager.swift in Sources */,
+				041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */,
 				04CBA54E1EE76E6D00D5C17C /* ProtocolUtils.swift in Sources */,
 				043790131EE6FA04009D651A /* AppDelegate.swift in Sources */,
 				0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */,
