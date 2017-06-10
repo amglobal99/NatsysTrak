@@ -24,6 +24,8 @@ struct GlobalConstants {
       // MARK: - Constants
   
       static let githubAPIManager = GitHubAPIManager.sharedInstance
+      static let globalFunctions = GlobalFunctions.sharedInstance
+  
   
       static let companyName = "Natsys International"
       static let companyAddress = "1808 Mountain Lake Dr GA 30339"

@@ -105,10 +105,12 @@ class GitHubAPIManager {
   
   
   
-  
+  /*
   func hideSpinner(){
     SwiftSpinner.hide()
   }
+  
+  */
   
   
   
@@ -123,12 +125,13 @@ class GitHubAPIManager {
     switch status {
     case .unreachable:
       self.internetIsConnected = false
-      DDLogDebug("Notified that Internet is NOT Connected")
+      DDLogDebug("updateConnectivityStatus: Notified that Internet is NOT Connected")
       GlobalFunctions.displayNoConnectivityMessage()
     default:
       self.internetIsConnected = true
-      DDLogDebug("Notified that Internet is Connected")
-      self.hideSpinner()
+      DDLogDebug("updateConnectivityStatus: Notified that Internet is Connected")
+      //self.hideSpinner()
+      GlobalFunctions.hideSpinner()
     }
     
   } // end func
