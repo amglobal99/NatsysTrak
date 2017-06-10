@@ -12,7 +12,9 @@ import SwiftSpinner
 import CocoaLumberjack
 
 
-
+/// Class includes generic functions used throughout the application.
+/// The function updateConnectivityStatus is exposed to Objective C
+///
 class  GlobalFunctions {
   
   
@@ -22,7 +24,7 @@ class  GlobalFunctions {
       var internetIsConnected:Bool = true
       
 
-      /// Add a Notification observer
+      /// Adds a Notification observer
       static func addNotificationObserver(_ observer: AnyObject, selector: Selector, name: Notification.Name){
         removeNotificationObserver(observer, name: name)
         NotificationCenter.default.addObserver(observer, selector: selector, name: name, object: nil)
@@ -61,7 +63,7 @@ class  GlobalFunctions {
       }
       
   
-      // Hide the spinner
+      /// Hide the spinner
       static func hideSpinner(){
         SwiftSpinner.hide()
       }
@@ -69,7 +71,7 @@ class  GlobalFunctions {
   
       /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
       /// An observer has been specified in the AppDelegate method 'didFinishLaunchingWithOptions'
-      
+      /// -parameter: notification
      @objc func updateConnectivityStatus (_ notification: NSNotification) {
         
         DDLogDebug("GlobalFunctions - updateConnectivityStatus: Received notification.")
