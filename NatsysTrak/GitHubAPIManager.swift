@@ -113,7 +113,7 @@ class GitHubAPIManager {
   */
   
   
-  
+  /*
   
   /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
   /// An observer has been specified in the AppDelegate method 'didFinishLaunchingWithOptions'
@@ -138,6 +138,9 @@ class GitHubAPIManager {
   
   
 
+  
+  */
+  
   
   
   

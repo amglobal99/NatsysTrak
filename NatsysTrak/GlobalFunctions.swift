@@ -18,8 +18,8 @@ class  GlobalFunctions {
   
         static let sharedInstance = GlobalFunctions()
   
-        var connected: Bool? = true
-  
+        // var connected: Bool? = true
+
         // Flag that tracks internet connectivity
         var internetIsConnected:Bool = true
         
@@ -95,12 +95,13 @@ class  GlobalFunctions {
      @objc func updateConnectivityStatus (_ notification: NSNotification) {
         
         DDLogDebug("GlobalFunctions - updateConnectivityStatus: Received notification.")
+      
         guard let status = Network.reachability?.status else { return }
         switch status {
         case .unreachable:
           self.internetIsConnected = false
           DDLogDebug("GlobalFunctions - Notified that Internet is NOT Connected")
-          GlobalFunctions.displayNoConnectivityMessage()
+            GlobalFunctions.displayNoConnectivityMessage()
         default:
           self.internetIsConnected = true
           DDLogDebug("GlobalFunctions - Notified that Internet is Connected")

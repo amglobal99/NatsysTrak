@@ -53,7 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     // Add observer to check when internet connectivity status changes
-    let apiClient = GlobalConstants.githubAPIManager
+    //let apiClient = GlobalConstants.githubAPIManager
+    let apiClient = GlobalConstants.globalFunctions
+
    //  NotificationCenter.default.addObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged, object: Network.reachability)
     
     GlobalFunctions.addNotificationObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged)
