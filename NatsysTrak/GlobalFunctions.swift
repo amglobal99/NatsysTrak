@@ -17,16 +17,25 @@ struct  GlobalFunctions {
   
   
       var connected: Bool? = true
+  
+  
+  
+      // Flag that tracks internet connectivity
+      var internetIsConnected:Bool = true
       
+  
+  
+  
+  
       
       /// Add a Notification observer
-      func addNotificationObserver(_ observer: AnyObject, selector: Selector, name: Notification.Name){
+      static func addNotificationObserver(_ observer: AnyObject, selector: Selector, name: Notification.Name){
         removeNotificationObserver(observer, name: name)
         NotificationCenter.default.addObserver(observer, selector: selector, name: name, object: nil)
       }
       
       /// Remove observer
-      func removeNotificationObserver(_ observer: AnyObject, name: Notification.Name){
+      static func removeNotificationObserver(_ observer: AnyObject, name: Notification.Name){
         NotificationCenter.default.removeObserver(observer, name: name, object: nil)
       }
       
@@ -61,7 +70,9 @@ struct  GlobalFunctions {
         }
       }
       
-      
+  
+  
+  
       // Update Internet Connectivity status
       mutating func updateConnectivityStatus (status:Bool) {
         self.connected = status
@@ -69,11 +80,37 @@ struct  GlobalFunctions {
   
   
   
-  func test() {
-      print("test")
-  }
+  
+  
+  /*
+  
+  /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
+  /// An observer has been specified in the AppDelegate method 'didFinishLaunchingWithOptions'
+  
+  func updateConnectivityStatus (_ notification: NSNotification) {
+    
+    DDLogDebug("updateConnectivityStatus: Received notification.")
+    guard let status = Network.reachability?.status else { return }
+    switch status {
+    case .unreachable:
+      self.internetIsConnected = false
+      DDLogDebug("Notified that Internet is NOT Connected")
+      GlobalFunctions.displayNoConnectivityMessage()
+    default:
+      self.internetIsConnected = true
+      DDLogDebug("Notified that Internet is Connected")
+      self.hideSpinner()
+    }
+    
+  } // end func
+  
+  
+
+  */
   
   
   
+  
+    
   
 } // end struct

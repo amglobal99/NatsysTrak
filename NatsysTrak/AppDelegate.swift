@@ -34,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //  defaults.register(defaults: ["enableRotation" : true ] )
   
     
-    
     // Internet connectivity related.
     // We'd like to be notified when app loses iNternet connectivity.
     // Here. we'll add a notification to inform us when connectivity changes.
@@ -55,12 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Add observer to check when internet connectivity status changes
     let apiClient = GlobalConstants.githubAPIManager
-    NotificationCenter.default.addObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged, object: Network.reachability)
+   //  NotificationCenter.default.addObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged, object: Network.reachability)
     
-    
-    
-    // TODO:  Use Global Function instead
-    
+    GlobalFunctions.addNotificationObserver(apiClient, selector: #selector(apiClient.updateConnectivityStatus), name: .flagsChanged)
     
     
     
