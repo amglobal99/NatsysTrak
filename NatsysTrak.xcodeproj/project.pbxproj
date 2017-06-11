@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */; };
-		04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FD31EE866080069F8BD /* GlobalFunctions.swift */; };
 		04252FD91EE869840069F8BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04252FD81EE869840069F8BD /* Settings.bundle */; };
 		04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDA1EE8824E0069F8BD /* GatewayController.swift */; };
 		04252FDE1EE8876A0069F8BD /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDD1EE8876A0069F8BD /* LoggerFactory.swift */; };
@@ -31,6 +30,7 @@
 		04C17AF81EED90C600B6D699 /* ExtensonNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AF71EED90C600B6D699 /* ExtensonNotification.swift */; };
 		04C17AFA1EED97D600B6D699 /* ProtocolInternetConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AF91EED97D600B6D699 /* ProtocolInternetConnectable.swift */; };
 		04C17AFC1EEDD42300B6D699 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AFB1EEDD42300B6D699 /* GlobalHelper.swift */; };
+		04C17AFE1EEDD96600B6D699 /* SwiftSpinnerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AFD1EEDD96600B6D699 /* SwiftSpinnerHelper.swift */; };
 		04CBA5451EE76D4000D5C17C /* ExtensionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5441EE76D4000D5C17C /* ExtensionArray.swift */; };
 		04CBA5481EE76D7B00D5C17C /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5471EE76D7B00D5C17C /* ExtensionString.swift */; };
 		04CBA54A1EE76DA700D5C17C /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5491EE76DA700D5C17C /* ExtensionDictionary.swift */; };
@@ -63,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIManager.swift; sourceTree = "<group>"; };
-		04252FD31EE866080069F8BD /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		04252FD81EE869840069F8BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		04252FDA1EE8824E0069F8BD /* GatewayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayController.swift; sourceTree = "<group>"; };
 		04252FDC1EE885570069F8BD /* NatsysTrak-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NatsysTrak-Prefix.pch"; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		04C17AF71EED90C600B6D699 /* ExtensonNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensonNotification.swift; sourceTree = "<group>"; };
 		04C17AF91EED97D600B6D699 /* ProtocolInternetConnectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolInternetConnectable.swift; sourceTree = "<group>"; };
 		04C17AFB1EEDD42300B6D699 /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
+		04C17AFD1EEDD96600B6D699 /* SwiftSpinnerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinnerHelper.swift; sourceTree = "<group>"; };
 		04CBA5441EE76D4000D5C17C /* ExtensionArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionArray.swift; sourceTree = "<group>"; };
 		04CBA5471EE76D7B00D5C17C /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		04CBA5491EE76DA700D5C17C /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				04CBA5551EE76F9700D5C17C /* GlobalConstants.swift */,
-				04252FD31EE866080069F8BD /* GlobalFunctions.swift */,
 				04C17AFB1EEDD42300B6D699 /* GlobalHelper.swift */,
+				04C17AFD1EEDD96600B6D699 /* SwiftSpinnerHelper.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -598,13 +598,13 @@
 				04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */,
 				04CBA5581EE7709C00D5C17C /* Reachability.swift in Sources */,
 				04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */,
-				04252FD41EE866080069F8BD /* GlobalFunctions.swift in Sources */,
 				04C17AFC1EEDD42300B6D699 /* GlobalHelper.swift in Sources */,
 				04252FE21EE8964D0069F8BD /* MainController.swift in Sources */,
 				041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */,
 				046B8BCA1EECA2C00021812F /* KeychainSwiftDistrib.swift in Sources */,
 				04CBA54E1EE76E6D00D5C17C /* ProtocolUtils.swift in Sources */,
 				043790131EE6FA04009D651A /* AppDelegate.swift in Sources */,
+				04C17AFE1EEDD96600B6D699 /* SwiftSpinnerHelper.swift in Sources */,
 				0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */,
 				04252FE01EE895D90069F8BD /* Login.swift in Sources */,
 				04252FDE1EE8876A0069F8BD /* LoggerFactory.swift in Sources */,

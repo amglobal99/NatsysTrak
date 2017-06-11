@@ -51,12 +51,6 @@ class GlobalHelper {
   }
   
   
-  /// Hide the spinner
-  static func hideSpinner(){
-    SwiftSpinner.hide()
-  }
-  
-  
   
   
   /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
@@ -76,7 +70,7 @@ class GlobalHelper {
     default:
       self.internetIsConnected = true
       DDLogDebug("GlobalHelper - Notified that Internet is Connected")
-      GlobalHelper.hideSpinner()
+      SwiftSpinnerHelper.hideSpinner()
     }
     
   } // end func
