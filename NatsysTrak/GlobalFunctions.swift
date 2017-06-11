@@ -24,6 +24,8 @@ class  GlobalFunctions {
       var internetIsConnected:Bool = true
       
 
+  
+  /*
       /// Adds a Notification observer
       static func addNotificationObserver(_ observer: AnyObject, selector: Selector, name: Notification.Name){
         removeNotificationObserver(observer, name: name)
@@ -35,6 +37,12 @@ class  GlobalFunctions {
         NotificationCenter.default.removeObserver(observer, name: name, object: nil)
       }
   
+ */
+  
+  
+  
+ 
+ 
       /// Display message to user stating connection to internet is unavailable
       static func displayNoConnectivityMessage() {
         DDLogDebug("GlobalFunctions - displayNoConnectivityMessage: Will display no connectivity message.")

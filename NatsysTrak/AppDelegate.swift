@@ -56,7 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
       // Add observer to check when internet connectivity status changes
       let observer = GlobalConstants.globalFunctions
-      GlobalFunctions.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
+      //GlobalFunctions.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
+       Notification.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
     
     
     
