@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     GlobalConstants.userDefaults.synchronize()
 
     
-    
+  
     
     
     

@@ -40,6 +40,11 @@ class GatewayController: UIViewController {
         
         
         
+        
+        startActivityIndicator()
+        
+        
+        
                 
       } // end function
 
