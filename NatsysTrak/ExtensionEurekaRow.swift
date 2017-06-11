@@ -8,31 +8,32 @@
 
 import Eureka
 
-var extensionPropertyStorage: [String: [String: Any]] = [:]
+    var extensionPropertyStorage: [String: [String: Any]] = [:]
+    var maxLength_ = "maxLength"
 
-var maxLength_ = "maxLength"
 
 extension Row {
   
-  public var maxLength: Int? {
-    get {
-      return didSetMaxLength
+    public var maxLength: Int? {
+      get {
+        return didSetMaxLength
+      }
+      set {
+        didSetMaxLength = newValue
+      }
     }
-    set {
-      didSetMaxLength = newValue
-    }
-  }
   
-  private var didSetMaxLength: Int? {
-    get {
-      return extensionPropertyStorage[self.tag!]?[maxLength_] as? Int
+  
+    private var didSetMaxLength: Int? {
+      get {
+        return extensionPropertyStorage[self.tag!]?[maxLength_] as? Int
+      }
+      set {
+        var selfDictionary = extensionPropertyStorage[self.tag!] ?? [String: Any]()
+        selfDictionary[maxLength_] = newValue
+        extensionPropertyStorage[self.tag!] = selfDictionary
+      }
     }
-    set {
-      var selfDictionary = extensionPropertyStorage[self.tag!] ?? [String: Any]()
-      selfDictionary[maxLength_] = newValue
-      extensionPropertyStorage[self.tag!] = selfDictionary
-    }
-  }
   
   
   

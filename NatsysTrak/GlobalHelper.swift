@@ -1,5 +1,5 @@
 //
-//  ProtocolInternetConnectable.swift
+//  GlobalHelper.swift
 //  NatsysTrak
 //
 //  Created by Jack Patil on 6/11/17.
@@ -11,16 +11,17 @@ import CocoaLumberjack
 import SwiftSpinner
 
 
-protocol InternetConnectable{
+
+class GlobalHelper {
   
-}
-
-
-
-
-extension InternetConnectable {
   
-  /*
+  
+  static let sharedInstance = GlobalHelper()
+  
+  // Flag that tracks internet connectivity
+  var internetIsConnected:Bool = true
+  
+  
   /// Display message to user stating connection to internet is unavailable
   static func displayNoConnectivityMessage() {
     DDLogDebug("GlobalHelper - displayNoConnectivityMessage: Will display no connectivity message.")
@@ -36,6 +37,7 @@ extension InternetConnectable {
   }
   
   
+  
   /// check if Internet connection is available.
   /// do this check before sending any url requests
   static func isInternetConnectionAvailable() -> Bool {
@@ -48,7 +50,12 @@ extension InternetConnectable {
     }
   }
   
-
+  
+  /// Hide the spinner
+  static func hideSpinner(){
+    SwiftSpinner.hide()
+  }
+  
   
   
   
@@ -65,6 +72,7 @@ extension InternetConnectable {
       self.internetIsConnected = false
       DDLogDebug("GlobalHelper - Notified that Internet is NOT Connected")
       GlobalHelper.displayNoConnectivityMessage()
+      
     default:
       self.internetIsConnected = true
       DDLogDebug("GlobalHelper - Notified that Internet is Connected")
@@ -73,11 +81,9 @@ extension InternetConnectable {
     
   } // end func
   
+  
+  
 
-  
-  */
-  
-  
   
   
 }

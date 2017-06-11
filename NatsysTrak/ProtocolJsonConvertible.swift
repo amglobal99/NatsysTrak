@@ -52,7 +52,7 @@ extension JsonConvertible  {
             let urlRequest = URLRequest(url: url)
             
             // Check for Internet connectivity
-            if  GlobalFunctions.isInternetConnectionAvailable()      {
+            if  GlobalHelper.isInternetConnectionAvailable()      {
               DDLogDebug("Internet connection OK")
             } else {
               DDLogDebug("Internet connection FAILED")

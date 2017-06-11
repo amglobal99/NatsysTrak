@@ -22,27 +22,8 @@ class  GlobalFunctions {
 
       // Flag that tracks internet connectivity
       var internetIsConnected:Bool = true
-      
-
-  
-  /*
-      /// Adds a Notification observer
-      static func addNotificationObserver(_ observer: AnyObject, selector: Selector, name: Notification.Name){
-        removeNotificationObserver(observer, name: name)
-        NotificationCenter.default.addObserver(observer, selector: selector, name: name, object: nil)
-      }
-  
-      /// Remove observer
-      static func removeNotificationObserver(_ observer: AnyObject, name: Notification.Name){
-        NotificationCenter.default.removeObserver(observer, name: name, object: nil)
-      }
-  
- */
   
   
-  
- 
- 
       /// Display message to user stating connection to internet is unavailable
       static func displayNoConnectivityMessage() {
         DDLogDebug("GlobalFunctions - displayNoConnectivityMessage: Will display no connectivity message.")
@@ -57,7 +38,8 @@ class  GlobalFunctions {
         SwiftSpinner.show(delay: 0.1, title: "Unable to contact servers. Please try again later.")
       }
       
-  
+ 
+
       /// check if Internet connection is available.
       /// do this check before sending any url requests
       static func isInternetConnectionAvailable() -> Bool {
@@ -75,7 +57,9 @@ class  GlobalFunctions {
       static func hideSpinner(){
         SwiftSpinner.hide()
       }
-      
+  
+  
+  
   
       /// Method to track when internet connectivity changes status from Connected to Not Connected and vice-versa
       /// An observer has been specified in the AppDelegate method 'didFinishLaunchingWithOptions'
@@ -90,6 +74,7 @@ class  GlobalFunctions {
           self.internetIsConnected = false
           DDLogDebug("GlobalFunctions - Notified that Internet is NOT Connected")
             GlobalFunctions.displayNoConnectivityMessage()
+          
         default:
           self.internetIsConnected = true
           DDLogDebug("GlobalFunctions - Notified that Internet is Connected")
@@ -100,7 +85,6 @@ class  GlobalFunctions {
       
   
 
-  
     
   
 } // end class

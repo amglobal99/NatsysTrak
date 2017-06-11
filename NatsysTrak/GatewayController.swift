@@ -34,13 +34,13 @@ class GatewayController: UIViewController {
         
         
             // Let's check for Internet connection
-        if !(GlobalFunctions.isInternetConnectionAvailable() ) {
-          GlobalFunctions.displayNoConnectivityMessage()
+        if !(GlobalHelper.isInternetConnectionAvailable() ) {
+          GlobalHelper.displayNoConnectivityMessage()
         }
         
         
         
-        startActivityIndicator()
+        //startActivityIndicator()
         
         
         

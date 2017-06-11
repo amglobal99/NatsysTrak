@@ -55,39 +55,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
       // Add observer to check when internet connectivity status changes
-      let observer = GlobalConstants.globalFunctions
-      //GlobalFunctions.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
-       Notification.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
+      let observer = GlobalConstants.globalHelper
+      Notification.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
     
     
-    
-    
-    // Let's add the user's Device ID to keychain. Get the current UUID
-    let myDeviceId = UIDevice.current.identifierForVendor!.uuidString
-    
-    keychain.synchronizable = true
-    
-    // Check if 'did' key is set in keychain. If not, set the key with current UUID value.
-    // This allows user to maintain same UUID even after app is deleted and reinstalled.
-    if let didKey  = keychain.get("did") {
-      DDLogDebug("A value for did key already exists. Current key: \(didKey)")
-      //GlobalConstants.userDefaults.setValue(true, forKey: "setup")
-    } else {
-      DDLogDebug("Adding the Device ID value to keychain.")
-      keychain.set(myDeviceId, forKey: "did")
-    }
-    
-    let keychainDidId = keychain.get("did")
-    DDLogDebug("Keychain - Current Device ID: \(keychainDidId ?? "Unknown")")
-    
-    
-    // set the did key with UUID value from keychain
-    //  print("It appears that the did key is nil")
-    GlobalConstants.userDefaults.setValue(keychainDidId, forKey: "did")
-    GlobalConstants.userDefaults.synchronize()
+      // Let's add the user's Device ID to keychain. Get the current UUID
+      let myDeviceId = UIDevice.current.identifierForVendor!.uuidString
+      
+      keychain.synchronizable = true
+      
+      // Check if 'did' key is set in keychain. If not, set the key with current UUID value.
+      // This allows user to maintain same UUID even after app is deleted and reinstalled.
+      if let didKey  = keychain.get("did") {
+        DDLogDebug("A value for did key already exists. Current key: \(didKey)")
+        //GlobalConstants.userDefaults.setValue(true, forKey: "setup")
+      } else {
+        DDLogDebug("Adding the Device ID value to keychain.")
+        keychain.set(myDeviceId, forKey: "did")
+      }
+      
+      let keychainDidId = keychain.get("did")
+      DDLogDebug("Keychain - Current Device ID: \(keychainDidId ?? "Unknown")")
+      
+      
+      // set the did key with UUID value from keychain
+      //  print("It appears that the did key is nil")
+      GlobalConstants.userDefaults.setValue(keychainDidId, forKey: "did")
+      GlobalConstants.userDefaults.synchronize()
 
+      
     
-  
     
     
     
