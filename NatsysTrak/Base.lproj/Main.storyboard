@@ -34,8 +34,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="NVp-z9-MTb" secondAttribute="trailing" constant="52" id="n4I-AY-NXC"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="action" id="JsH-ax-B1H">
+                            <connections>
+                                <action selector="shareWithSender:" destination="BYZ-38-t0r" id="lhr-UY-wQW"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Gateway" id="6Aw-bo-7pm"/>
                     <connections>
+                        <outlet property="actionButtonItem" destination="JsH-ax-B1H" id="JyH-U8-HFb"/>
                         <segue destination="izg-5F-R2N" kind="presentation" identifier="main" id="Yhr-fM-5Ec"/>
                         <segue destination="DJE-j5-3Cq" kind="presentation" identifier="login" id="l3L-Gj-Iz3"/>
                     </connections>

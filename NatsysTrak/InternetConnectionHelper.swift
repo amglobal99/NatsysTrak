@@ -1,8 +1,8 @@
 //
-//  GlobalHelper.swift
+//  NotificationHelper.swift
 //  NatsysTrak
 //
-//  Created by Jack Patil on 6/11/17.
+//  Created by Jack Patil on 6/15/17.
 //  Copyright © 2017 Natsys International. All rights reserved.
 //
 
@@ -11,17 +11,17 @@ import CocoaLumberjack
 import SwiftSpinner
 
 
-final class GlobalHelper {
+
+class InternetConnectionHelper {
   
-  static let sharedInstance = GlobalHelper()
   
-  // Private Initializer
-  private init(){
+  static let sharedInstance = InternetConnectionHelper()
+  
+  
+  private init () {
   }
   
   
-  
-  /*
   // Flag that tracks internet connectivity
   var internetIsConnected:Bool = true
   
@@ -67,9 +67,10 @@ final class GlobalHelper {
     guard let status = Network.reachability?.status else { return }
     switch status {
     case .unreachable:
-     // self.internetIsConnected = false
+      // self.internetIsConnected = false
       DDLogDebug("GlobalHelper - Notified that Internet is NOT Connected")
-      GlobalHelper.displayNoConnectivityMessage()
+      //GlobalHelper.displayNoConnectivityMessage()
+      InternetConnectionHelper.displayNoConnectivityMessage()
       
     default:
       //self.internetIsConnected = true
@@ -79,11 +80,8 @@ final class GlobalHelper {
     
   } // end func
   
-  */
   
   
   
   
-
-  
-}
+} // end class

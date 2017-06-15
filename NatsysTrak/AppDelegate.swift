@@ -55,8 +55,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
       // Add observer to check when internet connectivity status changes
-      let observer = GlobalConstants.globalHelper
+     // let observer = GlobalConstants.globalHelper
+      let observer = GlobalConstants.internetConnectionHelper
+    
       Notification.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
+      // Notification.addNotificationObserver(observer, selector: #selector(GlobalHelper.updateConnectivityStatus), name: .flagsChanged)
+    
+    
+    
+    
+    
+    
+    
     
     
       // Let's add the user's Device ID to keychain. Get the current UUID

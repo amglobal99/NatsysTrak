@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041954051EF1DB0400E25CC9 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041954041EF1DB0400E25CC9 /* TestHelper.swift */; };
 		041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */; };
 		04252FD91EE869840069F8BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04252FD81EE869840069F8BD /* Settings.bundle */; };
 		04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FDA1EE8824E0069F8BD /* GatewayController.swift */; };
@@ -39,6 +40,10 @@
 		04CBA5541EE76F1900D5C17C /* ExtensionEurekaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5531EE76F1900D5C17C /* ExtensionEurekaRow.swift */; };
 		04CBA5561EE76F9700D5C17C /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5551EE76F9700D5C17C /* GlobalConstants.swift */; };
 		04CBA5581EE7709C00D5C17C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBA5571EE7709C00D5C17C /* Reachability.swift */; };
+		04D4E5101EEF0AE500E5A254 /* CustomPDFActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4E50F1EEF0AE500E5A254 /* CustomPDFActivity.swift */; };
+		04FDF1021EF2C32300E8489D /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDF1011EF2C32300E8489D /* ProtocolTest.swift */; };
+		04FDF1041EF2DB9700E8489D /* ExtensionTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDF1031EF2DB9700E8489D /* ExtensionTestHelper.swift */; };
+		04FDF1061EF2FD8800E8489D /* InternetConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDF1051EF2FD8800E8489D /* InternetConnectionHelper.swift */; };
 		7ABA8D6078FE55B8AEF47112 /* Pods_NatsysTrakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A602208DCAF8086D961C91C7 /* Pods_NatsysTrakUITests.framework */; };
 		8E0C03E794B9082C05028BAE /* Pods_NatsysTrak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918AEDACD36B0AE74EB20F04 /* Pods_NatsysTrak.framework */; };
 		B0745F2E987CEB6F499461CC /* Pods_NatsysTrakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4958793DE5E602BAFEFE78F /* Pods_NatsysTrakTests.framework */; };
@@ -62,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041954041EF1DB0400E25CC9 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		041ED0FB1EEB24CF007C5205 /* GitHubAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIManager.swift; sourceTree = "<group>"; };
 		04252FD81EE869840069F8BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		04252FDA1EE8824E0069F8BD /* GatewayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,10 @@
 		04CBA5531EE76F1900D5C17C /* ExtensionEurekaRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionEurekaRow.swift; sourceTree = "<group>"; };
 		04CBA5551EE76F9700D5C17C /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		04CBA5571EE7709C00D5C17C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		04D4E50F1EEF0AE500E5A254 /* CustomPDFActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPDFActivity.swift; sourceTree = "<group>"; };
+		04FDF1011EF2C32300E8489D /* ProtocolTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
+		04FDF1031EF2DB9700E8489D /* ExtensionTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTestHelper.swift; sourceTree = "<group>"; };
+		04FDF1051EF2FD8800E8489D /* InternetConnectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionHelper.swift; sourceTree = "<group>"; };
 		0CD198DF8BE1C37F333608F2 /* Pods-NatsysTrak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrak/Pods-NatsysTrak.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7E327C834CB3D1605CD155 /* Pods-NatsysTrakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakUITests/Pods-NatsysTrakUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6DEAC79D8CF127B56F5DEAC3 /* Pods-NatsysTrakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatsysTrakTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NatsysTrakTests/Pods-NatsysTrakTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +213,7 @@
 		043790111EE6FA04009D651A /* NatsysTrak */ = {
 			isa = PBXGroup;
 			children = (
+				04D4E5111EEF0AEF00E5A254 /* Activities */,
 				041ED0FD1EEB24D4007C5205 /* API */,
 				043790121EE6FA04009D651A /* AppDelegate.swift */,
 				0437901C1EE6FA05009D651A /* Assets.xcassets */,
@@ -260,6 +271,7 @@
 				04C17AF71EED90C600B6D699 /* ExtensonNotification.swift */,
 				04252FE91EE89A580069F8BD /* ExtensionView.swift */,
 				04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */,
+				04FDF1031EF2DB9700E8489D /* ExtensionTestHelper.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				04CBA54D1EE76E6D00D5C17C /* ProtocolUtils.swift */,
 				046B8BCC1EECD7DF0021812F /* ProtocolDateTimeConvertible.swift */,
 				04C17AF91EED97D600B6D699 /* ProtocolInternetConnectable.swift */,
+				04FDF1011EF2C32300E8489D /* ProtocolTest.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -281,8 +294,18 @@
 				04CBA5551EE76F9700D5C17C /* GlobalConstants.swift */,
 				04C17AFB1EEDD42300B6D699 /* GlobalHelper.swift */,
 				04C17AFD1EEDD96600B6D699 /* SwiftSpinnerHelper.swift */,
+				041954041EF1DB0400E25CC9 /* TestHelper.swift */,
+				04FDF1051EF2FD8800E8489D /* InternetConnectionHelper.swift */,
 			);
 			name = Globals;
+			sourceTree = "<group>";
+		};
+		04D4E5111EEF0AEF00E5A254 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				04D4E50F1EEF0AE500E5A254 /* CustomPDFActivity.swift */,
+			);
+			name = Activities;
 			sourceTree = "<group>";
 		};
 		330D767CB0A19470C960CBBD /* Frameworks */ = {
@@ -596,9 +619,12 @@
 				04CBA5481EE76D7B00D5C17C /* ExtensionString.swift in Sources */,
 				046B8BCD1EECD7DF0021812F /* ProtocolDateTimeConvertible.swift in Sources */,
 				04252FDB1EE8824E0069F8BD /* GatewayController.swift in Sources */,
+				04D4E5101EEF0AE500E5A254 /* CustomPDFActivity.swift in Sources */,
 				04CBA5581EE7709C00D5C17C /* Reachability.swift in Sources */,
 				04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */,
+				04FDF1061EF2FD8800E8489D /* InternetConnectionHelper.swift in Sources */,
 				04C17AFC1EEDD42300B6D699 /* GlobalHelper.swift in Sources */,
+				04FDF1041EF2DB9700E8489D /* ExtensionTestHelper.swift in Sources */,
 				04252FE21EE8964D0069F8BD /* MainController.swift in Sources */,
 				041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */,
 				046B8BCA1EECA2C00021812F /* KeychainSwiftDistrib.swift in Sources */,
@@ -608,6 +634,7 @@
 				0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */,
 				04252FE01EE895D90069F8BD /* Login.swift in Sources */,
 				04252FDE1EE8876A0069F8BD /* LoggerFactory.swift in Sources */,
+				04FDF1021EF2C32300E8489D /* ProtocolTest.swift in Sources */,
 				04C17AF81EED90C600B6D699 /* ExtensonNotification.swift in Sources */,
 				04CBA5561EE76F9700D5C17C /* GlobalConstants.swift in Sources */,
 				04CBA54C1EE76E3300D5C17C /* ProtocolJsonConvertible.swift in Sources */,
@@ -615,6 +642,7 @@
 				04252FE81EE89A1A0069F8BD /* ExtensionUIColor.swift in Sources */,
 				04CBA5451EE76D4000D5C17C /* ExtensionArray.swift in Sources */,
 				04252FEC1EE89A8A0069F8BD /* ExtensionViewController.swift in Sources */,
+				041954051EF1DB0400E25CC9 /* TestHelper.swift in Sources */,
 				04CBA54A1EE76DA700D5C17C /* ExtensionDictionary.swift in Sources */,
 				04252FE41EE899CE0069F8BD /* ExtensionNSDecimalNumber.swift in Sources */,
 				04252FE61EE899FC0069F8BD /* ExtensionTextField.swift in Sources */,

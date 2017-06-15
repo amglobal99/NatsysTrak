@@ -20,6 +20,7 @@ protocol InternetConnectable{
 
 extension InternetConnectable {
   
+  
   /*
   /// Display message to user stating connection to internet is unavailable
   static func displayNoConnectivityMessage() {
