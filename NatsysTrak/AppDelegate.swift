@@ -55,17 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
       // Add observer to check when internet connectivity status changes
-     // let observer = GlobalConstants.globalHelper
       let observer = GlobalConstants.internetConnectionHelper
-    
       Notification.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
-      // Notification.addNotificationObserver(observer, selector: #selector(GlobalHelper.updateConnectivityStatus), name: .flagsChanged)
-    
-    
-    
-    
-    
-    
     
     
     
@@ -93,10 +84,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       GlobalConstants.userDefaults.setValue(keychainDidId, forKey: "did")
       GlobalConstants.userDefaults.synchronize()
 
-      
-    
-    
-    
     
       return true
     

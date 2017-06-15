@@ -100,55 +100,6 @@ extension Utils {
       
       
   
-      /*
-      /// Display message to user stating connection to internet is unavailable
-      static func displayNoConnectivityMessage() {
-        DDLogDebug("GlobalHelper - displayNoConnectivityMessage: Will display no connectivity message.")
-        SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 18.0))
-        SwiftSpinner.show(delay: 0.1, title: "Unable to contact servers, please check your internet connection and try again.")
-      }
-      
-      /// Display message to user stating site is not responding
-      static func displaySiteIsDownMessage() {
-        DDLogDebug("GlobalHelper - displayNoConnectivityMessage: Will display site down message.")
-        SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 18.0))
-        SwiftSpinner.show(delay: 0.1, title: "Unable to contact servers. Please try again later.")
-      }
-  
-
-  
-  
-      /// Hide the spinner
-      static func hideSpinner(){
-        SwiftSpinner.hide()
-      }
-  
-  
-  
-  
-  
-      /// check if Internet connection is available.
-      /// do this check before sending any url requests
-      static func isInternetConnectionAvailable() -> Bool {
-        if (Network.reachability?.isConnectedToNetwork)!  {
-          DDLogDebug("GlobalHelper - isInternetConnectionAvailable:  Internet is connected")
-          return true
-        } else {
-          DDLogDebug("GlobalHelper - isInternetConnectionAvailable: Internet is disconncted")
-          return false
-        }
-      }
-      
-      
-      
-  */
-  
-  
-  
-  
-  
-  
-  
   
 }  // end extension
 
