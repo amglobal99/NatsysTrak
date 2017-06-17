@@ -32,19 +32,21 @@ extension JsonConvertible  {
       
       // MARK: - Methods
       
-      
-      ///   This function gives as a SwifyJSON  'JSON' object
-      ///    The results are placed in the Result variable
+  
+      ///   Using a url to access some regular JSON,
+      ///   this function converts and gives as a SwifyJSON  'JSON' object
+      ///   The results are placed in the Result variable
       ///
       ///   The rootpath is the path to your JSON entries.
       ///   For example, if my data is under 'employees' root attribute
       ///   and within that, it is under the 'users' attribute
       ///   Then your array will contain ["employees","users"]
       ///
-      ///     - Parameter: url:  A URL object for your REST API
+      ///     - Parameter url:  A URL object for your REST API
       ///     - Parameter rootPath: The root path for your JSON object
       ///
-      ///     - Returns: Nothing
+      ///     - Returns: a SwiftyJson 'JSON' object
+  
       
       func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
         
@@ -126,12 +128,14 @@ extension JsonConvertible  {
       /// We can use this function with a basic json array
       /// or an array which is 1 level deep
       ///
-      /// For example, let's say we have "employees" as root, and within that
+      /// For example, let's say we have a JSON object with "employees" as root, and within that
       /// we have {"id":2,"name":"john"}, ........
       /// That is an example of 1 level deep. Without employees, it is flat
       ///
-      /// NOTE: To acces an array thta is at say 3 level, use this format
+      /// NOTE: To acces an array that is at say 3 level deep, use this format.
+      /// For example, say our JSON object has 'responseData' as root node, then 'feed' node, then 'entries'. Use
       ///  for object in  jsonObject["responseData","feed","entries"].array!
+      ///
       ///
       /// - Parameter jsonObject: This is the SwiftyJSON object
       /// - Parameter key:   The key that serves as the section title
@@ -151,16 +155,20 @@ extension JsonConvertible  {
       
       
       
+  
       
       
-      
-      /// This functon will give us a Dictionary
+      /// This functon will give us a Dictionary of type [String:[String] ]
       /// For each key, we will return an array of values
       /// For example, from my JSON, I want to categorize by City
       /// So I want a Dictionary with City as key and an array as its values
-      /// param  obj :  This is the JSON object of type SwiftyJSON.JSON
-      /// param  key:  This is the key we want to categorize on
-      /// param rootAtribute:  Thisis the root element
+      ///
+      /// - Parameter  obj:  This is the JSON object of type SwiftyJSON.JSON
+      /// - Parameter key:  This is the key we want to categorize on
+      /// - Parameter keyArray:  TODO
+      /// - Parameter dataKey:  This is the root element
+      ///
+      /// - Returns: Dictionary with keys and array of values
       
       func getDictionary(from obj:JSON?, for key:String?, keyArray:[String]?, dataKey:String? ) -> [String:[String]]? {
         
@@ -200,6 +208,11 @@ extension JsonConvertible  {
       ///  we just lookup the key "teams" in our dict and retrieve values for that key
       ///  An array is returned
       ///
+      ///   - Parameter dict:  todo
+      ///   - Parameter key: ??
+      ///
+      ///   - Returns: array of values asscoiated with a key
+  
       
       func getDictionaryValues(fromDictionary dict:[String:[String]]?, for key:String?) -> [String]? {
         

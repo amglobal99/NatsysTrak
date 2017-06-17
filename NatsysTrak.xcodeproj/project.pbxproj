@@ -19,6 +19,8 @@
 		04252FE81EE89A1A0069F8BD /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */; };
 		04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE91EE89A580069F8BD /* ExtensionView.swift */; };
 		04252FEC1EE89A8A0069F8BD /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */; };
+		04363B581EF5EEA9009E3354 /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04363B571EF5EEA9009E3354 /* ExtensionDouble.swift */; };
+		04363B5A1EF5EF25009E3354 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04363B591EF5EF25009E3354 /* ExtensionInt.swift */; };
 		043790131EE6FA04009D651A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790121EE6FA04009D651A /* AppDelegate.swift */; };
 		043790181EE6FA05009D651A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043790161EE6FA05009D651A /* Main.storyboard */; };
 		0437901B1EE6FA05009D651A /* NatsysTrak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043790191EE6FA05009D651A /* NatsysTrak.xcdatamodeld */; };
@@ -80,6 +82,8 @@
 		04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		04252FE91EE89A580069F8BD /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		04363B571EF5EEA9009E3354 /* ExtensionDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
+		04363B591EF5EF25009E3354 /* ExtensionInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
 		0437900F1EE6FA04009D651A /* NatsysTrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatsysTrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043790121EE6FA04009D651A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043790171EE6FA05009D651A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -272,6 +276,8 @@
 				04252FE91EE89A580069F8BD /* ExtensionView.swift */,
 				04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */,
 				04FDF1031EF2DB9700E8489D /* ExtensionTestHelper.swift */,
+				04363B571EF5EEA9009E3354 /* ExtensionDouble.swift */,
+				04363B591EF5EF25009E3354 /* ExtensionInt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 				04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */,
 				04FDF1061EF2FD8800E8489D /* InternetConnectionHelper.swift in Sources */,
 				04C17AFC1EEDD42300B6D699 /* GlobalHelper.swift in Sources */,
+				04363B581EF5EEA9009E3354 /* ExtensionDouble.swift in Sources */,
 				04FDF1041EF2DB9700E8489D /* ExtensionTestHelper.swift in Sources */,
 				04252FE21EE8964D0069F8BD /* MainController.swift in Sources */,
 				041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */,
@@ -641,6 +648,7 @@
 				04CBA5541EE76F1900D5C17C /* ExtensionEurekaRow.swift in Sources */,
 				04252FE81EE89A1A0069F8BD /* ExtensionUIColor.swift in Sources */,
 				04CBA5451EE76D4000D5C17C /* ExtensionArray.swift in Sources */,
+				04363B5A1EF5EF25009E3354 /* ExtensionInt.swift in Sources */,
 				04252FEC1EE89A8A0069F8BD /* ExtensionViewController.swift in Sources */,
 				041954051EF1DB0400E25CC9 /* TestHelper.swift in Sources */,
 				04CBA54A1EE76DA700D5C17C /* ExtensionDictionary.swift in Sources */,
