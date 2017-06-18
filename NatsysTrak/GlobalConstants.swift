@@ -27,8 +27,6 @@ struct GlobalConstants {
       static let globalHelper = GlobalHelper.sharedInstance
       static let internetConnectionHelper = InternetConnectionHelper.sharedInstance
 
-  
-  
       static let companyName = "Natsys International"
       static let companyAddress = "1808 Mountain Lake Dr GA 30339"
       static let userDefaults = UserDefaults.standard
@@ -52,7 +50,17 @@ struct GlobalConstants {
       }()
   
 
-  
+      // NSDecimalHandler
+      static let handler = NSDecimalNumberHandler(
+        roundingMode: NSDecimalNumber.RoundingMode.bankers,
+        scale: 2,
+        raiseOnExactness: false,
+        raiseOnOverflow: false,
+        raiseOnUnderflow: false,
+        raiseOnDivideByZero: false
+      )
+
+    
   
   
   // MARK: - Configuration

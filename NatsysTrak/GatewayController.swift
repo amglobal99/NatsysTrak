@@ -23,7 +23,7 @@ class GatewayController: UIViewController, Utils, Test {
             
             DDLogDebug("Gateway Controller: Executing viewDidLoad")
         
-        /*
+        
             // check if setup or login is needed. If yes, segue to Login controller.
         
             let x =  GlobalConstants.userDefaults.bool(forKey: "enableRotation")
@@ -34,7 +34,7 @@ class GatewayController: UIViewController, Utils, Test {
             } else {
               print("noooo vaue")
             }
-*/
+
         
         
         
@@ -55,6 +55,8 @@ class GatewayController: UIViewController, Utils, Test {
         
         
         
+        /*
+        
         //MARK: - Usage of static methods
         
         TestHelper.staticBark()
@@ -73,6 +75,27 @@ class GatewayController: UIViewController, Utils, Test {
         // Create an instance of TestHelper
         let global = TestHelper.sharedInstance
         global.notStaticDoSomething(val: "JAck")
+        
+        
+        */
+        
+        
+        
+        // Let's try Multiplication
+        let length:NSDecimalNumber = 245.765
+        let width:NSDecimalNumber = 10.669
+        let tempArea = length.multiplying(by: width)
+        let area = tempArea.rounding(accordingToBehavior: GlobalConstants.handler)
+        print("Area is : \(area)")
+        
+        
+        // Let's do division
+        let v1: NSDecimalNumber = 235.76859
+        let v2:NSDecimalNumber =  7.864767
+        let tempAnswer = v1.dividing(by: v2)
+        let answer = tempAnswer.rounding(accordingToBehavior: GlobalConstants.handler )
+        print("Division answer : \(answer) ")
+        
         
         
         
