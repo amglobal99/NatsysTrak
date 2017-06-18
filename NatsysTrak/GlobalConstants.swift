@@ -63,6 +63,13 @@ struct GlobalConstants {
     
   
   
+  
+  
+  
+  
+  
+  
+  
   // MARK: - Configuration
   
   struct Configuration {

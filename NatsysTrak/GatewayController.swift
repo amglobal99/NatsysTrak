@@ -81,24 +81,6 @@ class GatewayController: UIViewController, Utils, Test {
         
         
         
-        // Let's try Multiplication
-        let length:NSDecimalNumber = 245.765
-        let width:NSDecimalNumber = 10.669
-        let tempArea = length.multiplying(by: width)
-        let area = tempArea.rounding(accordingToBehavior: GlobalConstants.handler)
-        print("Area is : \(area)")
-        
-        
-        // Let's do division
-        let v1: NSDecimalNumber = 235.76859
-        let v2:NSDecimalNumber =  7.864767
-        let tempAnswer = v1.dividing(by: v2)
-        let answer = tempAnswer.rounding(accordingToBehavior: GlobalConstants.handler )
-        print("Division answer : \(answer) ")
-        
-        
-        
-        
         
         
         
