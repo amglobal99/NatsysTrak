@@ -43,6 +43,16 @@ struct GlobalConstants {
       }()
   
   
+      // Number formatter
+      static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+        formatter.locale = Locale(identifier: Locale.current.identifier)
+        return formatter
+      }()
+  
+  
       // Session
       static let session: URLSession = {
         let config = URLSessionConfiguration.default

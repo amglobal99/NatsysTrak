@@ -14,6 +14,28 @@ extension String {
   
   
   
+  /// Converts a string value to a NSDecimalNumber
+  /// usage:
+  /// var priceStr = "367.875"
+  /// var itemPrice:NSDecimalNumber = priceStr.toNSDecimal()
+  ///
+  /// - Returns: a NSDecimalNumber or 0 if not successful
+  func toNSDecimal() -> NSDecimalNumber {
+    return GlobalConstants.numberFormatter.number(from: self) as? NSDecimalNumber ?? 0
+  }
   
   
-} // end class
+  
+  
+  
+  /// Function creates a NSDecimalNumber from a String value
+  
+  func getNSDecimalNumber() -> NSDecimalNumber?  {
+    return GlobalConstants.numberFormatter.number(from: self) as? NSDecimalNumber
+  }
+
+  
+  
+  
+  
+} // end extension
