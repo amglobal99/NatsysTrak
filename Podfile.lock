@@ -26,6 +26,7 @@ PODS:
     - PSOperations/Core
   - PSOperations/Passbook (3.0.0):
     - PSOperations/Core
+  - SwiftDate (4.0.14)
   - SwiftSpinner (1.2.0)
   - SwiftyJSON (3.1.4)
 
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - PINCache
   - PINRemoteImage
   - PSOperations
+  - SwiftDate (~> 4.0.14)
   - SwiftSpinner
   - SwiftyJSON
 
@@ -53,9 +55,10 @@ SPEC CHECKSUMS:
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   PSOperations: 6bc00aac233d9d19b60caced190e6cb8fbcb1dcd
+  SwiftDate: 4ef029fd3117cc287fe642658b9aca2217628976
   SwiftSpinner: 6892642232471da581ecb020a9150e07d17a954b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 9137b45d2d0ec7af7df9f644c8722d84131da0a2
+PODFILE CHECKSUM: 4256e3ae534d0090348a79f4ac5e6b59bce30580
 
 COCOAPODS: 1.2.1

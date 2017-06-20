@@ -19,6 +19,7 @@
 		04252FE81EE89A1A0069F8BD /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */; };
 		04252FEA1EE89A580069F8BD /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FE91EE89A580069F8BD /* ExtensionView.swift */; };
 		04252FEC1EE89A8A0069F8BD /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */; };
+		0426968D1EF8BCD500AAD3A2 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426968C1EF8BCD500AAD3A2 /* ExtensionDate.swift */; };
 		04363B581EF5EEA9009E3354 /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04363B571EF5EEA9009E3354 /* ExtensionDouble.swift */; };
 		04363B5A1EF5EF25009E3354 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04363B591EF5EF25009E3354 /* ExtensionInt.swift */; };
 		043790131EE6FA04009D651A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043790121EE6FA04009D651A /* AppDelegate.swift */; };
@@ -82,6 +83,7 @@
 		04252FE71EE89A1A0069F8BD /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		04252FE91EE89A580069F8BD /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		04252FEB1EE89A8A0069F8BD /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		0426968C1EF8BCD500AAD3A2 /* ExtensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		04363B571EF5EEA9009E3354 /* ExtensionDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
 		04363B591EF5EF25009E3354 /* ExtensionInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
 		0437900F1EE6FA04009D651A /* NatsysTrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatsysTrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +280,7 @@
 				04FDF1031EF2DB9700E8489D /* ExtensionTestHelper.swift */,
 				04363B571EF5EEA9009E3354 /* ExtensionDouble.swift */,
 				04363B591EF5EF25009E3354 /* ExtensionInt.swift */,
+				0426968C1EF8BCD500AAD3A2 /* ExtensionDate.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				04363B581EF5EEA9009E3354 /* ExtensionDouble.swift in Sources */,
 				04FDF1041EF2DB9700E8489D /* ExtensionTestHelper.swift in Sources */,
 				04252FE21EE8964D0069F8BD /* MainController.swift in Sources */,
+				0426968D1EF8BCD500AAD3A2 /* ExtensionDate.swift in Sources */,
 				041ED0FC1EEB24CF007C5205 /* GitHubAPIManager.swift in Sources */,
 				046B8BCA1EECA2C00021812F /* KeychainSwiftDistrib.swift in Sources */,
 				04CBA54E1EE76E6D00D5C17C /* ProtocolUtils.swift in Sources */,
