@@ -28,7 +28,16 @@ extension String {
   
   
   
-  /// Function creates a NSDecimalNumber from a String value
+  /// Function creates a NSDecimalNumber from a String value.
+  /// Returns a nil if function cannot create a NSDecimelNumber
+  /// var grandTotal: String  = "36.967"
+  ///
+  ///  var grnd = grandTotal.getNSDecimalNumber()
+  ///   if let grnd = grandTotal.getNSDecimalNumber() {
+  ///     print(grnd)
+  ///   } else {
+  ///     print("Not a nil")
+  ///   }
   
   func getNSDecimalNumber() -> NSDecimalNumber?  {
     return GlobalConstants.numberFormatter.number(from: self) as? NSDecimalNumber
