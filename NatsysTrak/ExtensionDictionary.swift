@@ -19,6 +19,19 @@ extension Dictionary where Value: Equatable {
   }
   
   
+  /// Function to convert filtered Dictionary ( which is an array of tuples) to a Dictionary
+  /// The function makes use of the toDictionary method which is an Array extension
+  /// Usage:
+  ///  let data = ["a":"yes", "b":"nope", "c":"oui", "d":"nyet"]
+  ///  let filtered = data.filteredDictionary({ $0.1 >= "o" })
+  ///  https://stackoverflow.com/questions/32604897/swift-filter-dictionary
+  /// 
+  func filteredDictionary(_ isIncluded: (Key, Value) -> Bool)  -> Dictionary<Key, Value>   {
+    return self.filter(isIncluded).toDictionary(byTransforming: { $0 })
+  }
+  
+  
+  
 } // end extn
 
 

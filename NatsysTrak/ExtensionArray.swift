@@ -23,6 +23,17 @@ extension Array {
   
   
   
+  /// Utility function to convert to Dictionary
+  func toDictionary<H:Hashable, T>(byTransforming transformer: (Element) -> (H, T)) -> Dictionary<H, T>   {
+      var result = Dictionary<H,T>()
+        self.forEach({ element in
+          let (key,value) = transformer(element)
+          result[key] = value
+        })
+        return result
+      }
   
   
-}
+  
+  
+} // end extension
