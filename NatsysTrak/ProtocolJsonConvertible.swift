@@ -28,8 +28,6 @@ protocol JsonConvertible: Utils {}
 extension JsonConvertible  {
   
   
-  
-      
       // MARK: - Methods
       
   
@@ -40,88 +38,76 @@ extension JsonConvertible  {
       ///   The rootpath is the path to your JSON entries.
       ///   For example, if my data is under 'employees' root attribute
       ///   and within that, it is under the 'users' attribute
-      ///   Then your array will contain ["employees","users"]
+      ///   Then your 'rootPath' array will contain ["employees","users"]
       ///
       ///     - Parameter url:  A URL object for your REST API
       ///     - Parameter rootPath: The root path for your JSON object
       ///
       ///     - Returns: a SwiftyJson 'JSON' object
   
+  
+  func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
+    
+    NSLog("getJSONObject: Started Execution")
+    let urlRequest = URLRequest(url: url)
+    
+    // Send Alamofire request
+    Alamofire.request(urlRequest)
+      .validate()
+      .responseJSON
+      { response  in
+        // First check if user Authenticated
+        //..........
+        
+        // Check if an Error is present
+        guard response.result.error == nil else {   // got an error
+          NSLog(response.result.error! as! String)
+          completionHandler(Result.failure(response.result.error!) )
+          return
+        }
+        
+        // check if result value is present
+        guard response.result.value != nil else {  // Data is nil
+          NSLog("Request did not return any data")
+          return
+        }
+        
+        //convert Response to SwiftyJSON object
+        let jsonObject:JSON  = JSON(response.result.value!)
+        
+        print("++++++++++++++++++++")
+        print(jsonObject)
+        
       
-      func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
-        
-            DDLogDebug("getJSONObejct: Started Execution")
-            let urlRequest = URLRequest(url: url)
+        if let path = rootPath { // rootPath is not Nil
+            print("Path is \(path) " )
+            let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
+            var pathString = ""
             
-            // Check for Internet connectivity
-        
-        if  InternetConnectionHelper.isInternetConnectionAvailable()   {
-             // if  GlobalHelper.isInternetConnectionAvailable()      {
-              
-              
-              DDLogDebug("Internet connection OK")
-            } else {
-              DDLogDebug("Internet connection FAILED")
-              showBanner(title: "No Connection", subtitle: "Please try again when Internet connection \n is available !!", image: nil, bkColor: UIColor.red)
-              return
+            for i in 0..<nodeCount {
+              if i < (nodeCount-1) {
+                pathString += path[i] + ","
+              }else {
+                pathString += path[i]
+              }
             }
-
             
-            // Send Alamofire request
-            Alamofire.request(urlRequest)
-              .validate()
-              .responseJSON
-              { response  in
-                // First check if user Authenticated
-                //..........
-                
-                // Check if an Error is present
-                guard response.result.error == nil else {   // got an error
-                  DDLogDebug(response.result.error! as! String)
-                  completionHandler(Result.failure(response.result.error!) )
-                  return
-                }
-                
-                // check if result value is present
-                guard response.result.value != nil else {  // Data is nil
-                  DDLogDebug("Request did not return any data")
-                  return
-                }
-                
-                //convert Response to SwiftyJSON object
-                let jsonObject:JSON  = JSON(response.result.value!)
-                
-                if rootPath == nil {
-                  completionHandler(Result.success(jsonObject))
-                } else {
-                  if let pathCount  = rootPath?.count  {
-                    switch pathCount  {
-                    case 1:
-                      let result = jsonObject[ (rootPath?[0])! ]
-                      completionHandler(Result.success(result))
-                    case 2:
-                      let result = jsonObject[ (rootPath?[0])!,(rootPath?[1])! ]
-                      completionHandler(Result.success(result))
-                    case 3:
-                      let result =  jsonObject[ (rootPath?[0])!,(rootPath?[1])!,(rootPath?[2])!    ]
-                      completionHandler(Result.success(result))
-                    case 4:
-                      let result =  jsonObject[ (rootPath?[0])!,(rootPath?[1])!,(rootPath?[2])!, (rootPath?[3])!    ]
-                      completionHandler(Result.success(result))
-                    default:
-                      completionHandler(Result.success(jsonObject))
-                    }
-                    
-                  } else { // must be nil
-                    completionHandler(Result.success(jsonObject))
-                  }
-                }//if rootPath =  nil
-            }  // end Alamofire request
-            
-            
-      } // end function
-      
-      
+            print("Pathstring: \(pathString)")
+            let result = jsonObject[ pathString ]
+            // print("result is \(result)")
+            completionHandler(Result.success(result))
+          
+        } else {  // rootPath is nil
+          completionHandler(Result.success(jsonObject))
+        }
+        
+    }  // end Alamofire request
+    
+  } // end function
+  
+  
+  
+  
   
   
       /// This function gives us an array of key values.
@@ -148,7 +134,7 @@ extension JsonConvertible  {
           return nil
         }
         let arrayNames:[String] = jsonObject.arrayValue.map({$0[key].stringValue})
-        let result   = Array(Set(arrayNames)).sorted()   //Remove Duplicates
+        let result:[String]  = Array(Set(arrayNames)).sorted()   //Remove Duplicates
         return result
       } // end func
       

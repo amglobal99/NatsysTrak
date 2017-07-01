@@ -32,6 +32,45 @@ extension Dictionary where Value: Equatable {
   
   
   
+  
+  /// Function to filter an Array of Dictionary items.
+  /// For example, let's say we have a Dictionary which contains an 
+  /// array of individual Dictionary items.
+  /// Each item is say a JSON entity.
+  /// Let's say we have an array of 1000 such objects. We want to filter that Dictionary,
+  /// and extract objects matching some criteria.
+  /// Usage:
+  ///  First, create an Array of individual Dictionary items
+  ///  dict3 = [
+  /// ["name":"jack","age": "10"],
+  /// ["name":"kim","age": "24"],
+  /// ["name":"pam","age":"44"]
+  /// ]
+  ///  var newFilter = filterArrayOfDictionaries(dictToSearch: dict3, searchKey: "name", searchValue: "jack")
+  ///  print(newFilter)
+  ///  Output:
+  ///  [["name": "jack", "age": "10"]]
+  
+  func filterArrayOfDictionaries(dictToSearch: [[String:String] ], searchKey: String, searchValue: String) -> [ [String:String] ] {
+    let filtered = dictToSearch.filter {
+      // $0["name"] == "jack"
+      val in
+      val[searchKey] == searchValue
+    }
+    
+    return filtered
+  }
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
 } // end extn
 
 

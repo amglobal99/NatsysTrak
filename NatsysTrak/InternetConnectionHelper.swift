@@ -64,8 +64,12 @@ class InternetConnectionHelper {
     
     DDLogDebug("GlobalHelper - updateConnectivityStatus: Received notification.")
     
-    guard let status = Network.reachability?.status else { return }
+    guard let status = Network.reachability?.status else {
+      return
+    }
+    
     switch status {
+    
     case .unreachable:
       // self.internetIsConnected = false
       DDLogDebug("GlobalHelper - Notified that Internet is NOT Connected")

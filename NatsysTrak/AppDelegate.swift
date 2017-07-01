@@ -24,11 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   
-  
+  /// This function allow us to do some inital setup for our app.
+  /// Here, we are configuring an oberserver to check when Internet connectivity is lost
+  /// We also configure our logger here.
+  ///
+  ///
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-    DDLogDebug("AppDelegate: Executing didFinishlaunchingWithOptions")
-    
+  
     // Initialize logger
     LoggerFactory.initLogging()
     
@@ -37,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //  defaults.register(defaults: ["environment" : "0"])
     //  defaults.register(defaults: ["enableRotation" : true ] )
   
+    
+    DDLogDebug("AppDelegate: Executing didFinishlaunchingWithOptions")
     
     // Internet connectivity related. We'd like to be notified when app loses iNternet connectivity.
     // Here. we'll add a notification to inform us when connectivity changes.
@@ -58,8 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let observer = GlobalConstants.internetConnectionHelper
       Notification.addNotificationObserver(observer, selector: #selector(observer.updateConnectivityStatus), name: .flagsChanged)
     
-    
-    
+
       // Let's add the user's Device ID to keychain. Get the current UUID
       let myDeviceId = UIDevice.current.identifierForVendor!.uuidString
       
