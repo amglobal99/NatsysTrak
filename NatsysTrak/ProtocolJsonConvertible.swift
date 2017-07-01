@@ -31,82 +31,82 @@ extension JsonConvertible  {
       // MARK: - Methods
       
   
-      ///   Using a url to access some regular JSON,
-      ///   this function converts and gives as a SwifyJSON  'JSON' object
-      ///   The results are placed in the Result variable
-      ///
-      ///   The rootpath is the path to your JSON entries.
-      ///   For example, if my data is under 'employees' root attribute
-      ///   and within that, it is under the 'users' attribute
-      ///   Then your 'rootPath' array will contain ["employees","users"]
-      ///
-      ///     - Parameter url:  A URL object for your REST API
-      ///     - Parameter rootPath: The root path for your JSON object
-      ///
-      ///     - Returns: a SwiftyJson 'JSON' object
+    ///   Using a url to access some regular JSON,
+    ///   this function converts and gives as a SwifyJSON  'JSON' object
+    ///   The results are placed in the Result variable
+    ///
+    ///   The rootpath is the path to your JSON entries.
+    ///   For example, if my data is under 'employees' root attribute
+    ///   and within that, it is under the 'users' attribute
+    ///   Then your 'rootPath' array will contain ["employees","users"]
+    ///
+    ///     - Parameter url:  A URL object for your REST API
+    ///     - Parameter rootPath: The root path for your JSON object
+    ///
+    ///     - Returns: a SwiftyJson 'JSON' object
+
   
-  
-  func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
-    
-    NSLog("getJSONObject: Started Execution")
-    let urlRequest = URLRequest(url: url)
-    
-    // Send Alamofire request
-    Alamofire.request(urlRequest)
-      .validate()
-      .responseJSON
-      { response  in
-        // First check if user Authenticated
-        //..........
+      func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
         
-        // Check if an Error is present
-        guard response.result.error == nil else {   // got an error
-          NSLog(response.result.error! as! String)
-          completionHandler(Result.failure(response.result.error!) )
-          return
-        }
+        NSLog("getJSONObject: Started Execution")
+        let urlRequest = URLRequest(url: url)
         
-        // check if result value is present
-        guard response.result.value != nil else {  // Data is nil
-          NSLog("Request did not return any data")
-          return
-        }
-        
-        //convert Response to SwiftyJSON object
-        let jsonObject:JSON  = JSON(response.result.value!)
-        
-        print("++++++++++++++++++++")
-        print(jsonObject)
-        
-      
-        if let path = rootPath { // rootPath is not Nil
-            print("Path is \(path) " )
-            let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
-            var pathString = ""
+        // Send Alamofire request
+        Alamofire.request(urlRequest)
+          .validate()
+          .responseJSON
+          { response  in
+            // First check if user Authenticated
+            //..........
             
-            for i in 0..<nodeCount {
-              if i < (nodeCount-1) {
-                pathString += path[i] + ","
-              }else {
-                pathString += path[i]
-              }
+            // Check if an Error is present
+            guard response.result.error == nil else {   // got an error
+              NSLog(response.result.error! as! String)
+              completionHandler(Result.failure(response.result.error!) )
+              return
             }
             
-            print("Pathstring: \(pathString)")
-            let result = jsonObject[ pathString ]
-            // print("result is \(result)")
-            completionHandler(Result.success(result))
+            // check if result value is present
+            guard response.result.value != nil else {  // Data is nil
+              NSLog("Request did not return any data")
+              return
+            }
+            
+            //convert Response to SwiftyJSON object
+            let jsonObject:JSON  = JSON(response.result.value!)
+            
+            print("++++++++++++++++++++")
+            print(jsonObject)
+            
           
-        } else {  // rootPath is nil
-          completionHandler(Result.success(jsonObject))
-        }
+            if let path = rootPath { // rootPath is not Nil
+                print("Path is \(path) " )
+                let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
+                var pathString = ""
+                
+                for i in 0..<nodeCount {
+                  if i < (nodeCount-1) {
+                    pathString += path[i] + ","
+                  }else {
+                    pathString += path[i]
+                  }
+                }
+                
+                print("Pathstring: \(pathString)")
+                let result = jsonObject[ pathString ]
+                // print("result is \(result)")
+                completionHandler(Result.success(result))
+              
+            } else {  // rootPath is nil
+              completionHandler(Result.success(jsonObject))
+            }
+            
+        }  // end Alamofire request
         
-    }  // end Alamofire request
+      } // end function
+      
+      
     
-  } // end function
-  
-  
-  
   
   
   
@@ -130,12 +130,14 @@ extension JsonConvertible  {
       ///
   
       func getSectionTitlesArray(from jsonObject:JSON?,  key:String?) -> [String]? {
+        
         guard let jsonObject = jsonObject, let key = key  else {
           return nil
         }
         let arrayNames:[String] = jsonObject.arrayValue.map({$0[key].stringValue})
         let result:[String]  = Array(Set(arrayNames)).sorted()   //Remove Duplicates
         return result
+        
       } // end func
       
       
@@ -149,9 +151,9 @@ extension JsonConvertible  {
       /// For example, from my JSON, I want to categorize by City
       /// So I want a Dictionary with City as key and an array as its values
       ///
-      /// - Parameter  obj:  This is the JSON object of type SwiftyJSON.JSON
+      /// - Parameter obj:  This is the JSON object of type SwiftyJSON.JSON
       /// - Parameter key:  This is the key we want to categorize on
-      /// - Parameter keyArray:  TODO
+      /// - Parameter keyArray: TODO
       /// - Parameter dataKey:  This is the root element
       ///
       /// - Returns: Dictionary with keys and array of values
@@ -205,11 +207,16 @@ extension JsonConvertible  {
         guard let dict = dict, let key = key else{
           return nil
         }
+        /*
         guard let result:[String] =  dict[key] else {
           return nil
         }
         
         return result
+        */
+        
+        return dict[key]
+        
       }
       
       
