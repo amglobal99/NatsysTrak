@@ -44,61 +44,7 @@ extension Utils {
       
       
       
-      
-  
-    ///   Function returns a URL.
-    ///
-    ///   - Parameters:
-    ///     - baseURLString:      the base URL string
-    ///     - method:             options are get, post etc
-    ///     - parameters:         parameters passed in
-    ///     - apiKey:             the api key if needed
-    ///
-    ///    - Returns:             a URL object
-  
-      func getSiteURL(baseURLString:String, method: String?, parameters: [String:String]?, apiKey:String? ) -> URL? {
         
-        guard  var components = URLComponents(string: baseURLString ) else {
-          return nil
-        }
-        
-        // check if we need to use method and apiKey
-        if method != nil && apiKey != nil {
-          var queryItems = [URLQueryItem]()
-          let baseParams  = [
-            "method": method,
-            "format": "json",
-            "nojsoncallback": "1",
-            "api_key": apiKey
-          ]
-          
-          for(key,value) in baseParams {
-            let item = URLQueryItem(name: key, value: value)
-            queryItems.append(item)
-          }
-          
-          if let additionalParams = parameters {   // make sure parameters is not nil
-            for (key, value) in additionalParams {
-              let item = URLQueryItem(name: key, value: value )
-              queryItems.append(item)
-            } //end for loop
-          } //end if
-          
-          components.queryItems = queryItems
-        } // if method != nil
-        
-        
-        guard let url = components.url else {
-          return nil
-        }
-        
-        return url
-        
-      } //end method
-      
-      
-      
-  
   
 }  // end extension
 

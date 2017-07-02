@@ -29,79 +29,132 @@ extension JsonConvertible  {
   
   
       // MARK: - Methods
-      
   
-    ///   Using a url to access some regular JSON,
-    ///   this function converts and gives as a SwifyJSON  'JSON' object
-    ///   The results are placed in the Result variable
-    ///
-    ///   The rootpath is the path to your JSON entries.
-    ///   For example, if my data is under 'employees' root attribute
-    ///   and within that, it is under the 'users' attribute
-    ///   Then your 'rootPath' array will contain ["employees","users"]
-    ///
-    ///     - Parameter url:  A URL object for your REST API
-    ///     - Parameter rootPath: The root path for your JSON object
-    ///
-    ///     - Returns: a SwiftyJson 'JSON' object
-
   
-      func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
+        ///   Function returns a URL object.
+        ///   The functon creates the URL object using a base url string along with additional info.
+        ///
+        ///   - Parameters:
+        ///     - baseURLString:      the base URL string
+        ///     - method:             options are GET, POST etc
+        ///     - parameters:         parameters passed in
+        ///     - apiKey:             the api key if needed
+        ///
+        ///    - Returns:             a URL object
         
-        NSLog("getJSONObject: Started Execution")
-        let urlRequest = URLRequest(url: url)
-        
-        // Send Alamofire request
-        Alamofire.request(urlRequest)
-          .validate()
-          .responseJSON
-          { response  in
-            // First check if user Authenticated
-            //..........
-            
-            // Check if an Error is present
-            guard response.result.error == nil else {   // got an error
-              NSLog(response.result.error! as! String)
-              completionHandler(Result.failure(response.result.error!) )
-              return
-            }
-            
-            // check if result value is present
-            guard response.result.value != nil else {  // Data is nil
-              NSLog("Request did not return any data")
-              return
-            }
-            
-            //convert Response to SwiftyJSON object
-            let jsonObject:JSON  = JSON(response.result.value!)
-            
-            print("++++++++++++++++++++")
-            print(jsonObject)
-            
+        func getSiteURL(baseURLString:String, method: String?, parameters: [String:String]?, apiKey:String? ) -> URL? {
           
-            if let path = rootPath { // rootPath is not Nil
-                print("Path is \(path) " )
-                let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
-                var pathString = ""
+              guard  var components = URLComponents(string: baseURLString ) else {
+                return nil
+              }
+              
+              // check if we need to use method and apiKey
+              if method != nil && apiKey != nil {
+                var queryItems = [URLQueryItem]()
+                let baseParams  = [
+                  "method": method,
+                  "format": "json",
+                  "nojsoncallback": "1",
+                  "api_key": apiKey
+                ]
                 
-                for i in 0..<nodeCount {
-                  if i < (nodeCount-1) {
-                    pathString += path[i] + ","
-                  }else {
-                    pathString += path[i]
-                  }
+                for(key,value) in baseParams {
+                  let item = URLQueryItem(name: key, value: value)
+                  queryItems.append(item)
                 }
                 
-                print("Pathstring: \(pathString)")
-                let result = jsonObject[ pathString ]
-                // print("result is \(result)")
-                completionHandler(Result.success(result))
+                if let additionalParams = parameters {   // make sure parameters is not nil
+                  for (key, value) in additionalParams {
+                    let item = URLQueryItem(name: key, value: value )
+                    queryItems.append(item)
+                  } //end for loop
+                } //end if
+                
+                components.queryItems = queryItems
+              } // if method != nil
+          
+              guard let url = components.url else {
+                return nil
+              }
               
-            } else {  // rootPath is nil
-              completionHandler(Result.success(jsonObject))
-            }
+              return url
+          
+        } //end method
+        
+        
+  
+  
+      ///   Function returns a SwiftyJSON object from a REST API
+      ///   Using a url to access some regular JSON,
+      ///   this function converts and gives as a SwifyJSON 'JSON' object
+      ///   The results are placed in the Result variable.
+      ///
+      ///   The rootpath is the path to your JSON entries.
+      ///   For example, if my data is under 'employees' root attribute
+      ///   and within that, it is under the 'users' attribute
+      ///   Then your 'rootPath' array will contain ["employees","users"]
+      ///
+      ///     - Parameter url:  A URL object for your REST API
+      ///     - Parameter rootPath: The root path for your JSON object
+      ///
+      ///     - Returns: a SwiftyJson 'JSON' object
+
+      func getJSONObject(for url:URL, rootPath:[String]?, completionHandler:  @escaping  (Result<JSON>) ->  Void    ) {
+        
+            DDLogDebug("getJSONObject: Started Execution")
+            let urlRequest = URLRequest(url: url)
             
-        }  // end Alamofire request
+            // Send Alamofire request
+            Alamofire.request(urlRequest)
+                  .validate()
+                  .responseJSON
+                  { response  in
+                    // First check if user Authenticated
+                    //..........
+                    
+                    // Check if an Error is present
+                    guard response.result.error == nil else {   // got an error
+                      NSLog(response.result.error! as! String)
+                      completionHandler(Result.failure(response.result.error!) )
+                      return
+                    }
+                    
+                    // check if result value is present
+                    guard response.result.value != nil else {  // Data is nil
+                      DDLogDebug("Request did not return any data")
+                      return
+                    }
+                    
+                    //convert Response to SwiftyJSON object
+                    let jsonObject:JSON  = JSON(response.result.value!)
+                    
+                    DDLogDebug("++++++++++++++++++++")
+                    DDLogDebug("JOSN object : \(jsonObject) ")
+                    
+                  
+                    if let path = rootPath { // rootPath is not Nil
+                        DDLogDebug("Path is \(path) " )
+                        let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
+                        var pathString = ""
+                        
+                        for i in 0..<nodeCount {
+                          if i < (nodeCount-1) {
+                            pathString += path[i] + ","
+                          }else {
+                            pathString += path[i]
+                          }
+                        }
+                        
+                        DDLogDebug("Pathstring: \(pathString)")
+                        let result = jsonObject[ pathString ]
+                        // print("result is \(result)")
+                        completionHandler(Result.success(result))
+                      
+                    } else {  // rootPath is nil
+                      completionHandler(Result.success(jsonObject))
+                    }
+                
+            }  // end Alamofire request
         
       } // end function
       
@@ -131,12 +184,12 @@ extension JsonConvertible  {
   
       func getSectionTitlesArray(from jsonObject:JSON?,  key:String?) -> [String]? {
         
-        guard let jsonObject = jsonObject, let key = key  else {
-          return nil
-        }
-        let arrayNames:[String] = jsonObject.arrayValue.map({$0[key].stringValue})
-        let result:[String]  = Array(Set(arrayNames)).sorted()   //Remove Duplicates
-        return result
+          guard let jsonObject = jsonObject, let key = key  else {
+            return nil
+          }
+          let arrayNames:[String] = jsonObject.arrayValue.map({$0[key].stringValue})
+          let result:[String]  = Array(Set(arrayNames)).sorted()   //Remove Duplicates
+          return result
         
       } // end func
       
@@ -160,30 +213,30 @@ extension JsonConvertible  {
       
       func getDictionary(from obj:JSON?, for key:String?, keyArray:[String]?, dataKey:String? ) -> [String:[String]]? {
         
-        var keyItems:[String] = []
-        var myDict:[String:[String]] = [:]   // Create a Dictionary to hold our data
-        
-        guard let obj = obj, let key = key, let keyArray = keyArray, let dataKey = dataKey else {
-          return nil
-        }
-        
-        DDLogDebug("getDictionary: Processing \(obj.count) objects. Key: \(key)  dataKey: \(dataKey) ")
-        
-        // For each key in keyArray, get all elements and create a Dictinary item
-        for i in keyArray {
-          for (_, things) in obj {
-            // if things[key].string == i {
-            if String(describing: things[key].rawValue) == i  {
-              keyItems.append(things[dataKey].stringValue)
+            var keyItems:[String] = []
+            var myDict:[String:[String]] = [:]   // Create a Dictionary to hold our data
+            
+            guard let obj = obj, let key = key, let keyArray = keyArray, let dataKey = dataKey else {
+              return nil
             }
-          } // end for loop
-          
-          keyItems = Array(Set(keyItems)).sorted()   // Remove Duplicates .... may not be necessary
-          myDict.updateValue(keyItems, forKey: i)   // add entry into Dictionary
-          keyItems.removeAll()   // clear our holding array
-        } // for i in keyArray
+            
+            DDLogDebug("getDictionary: Processing \(obj.count) objects. Key: \(key)  dataKey: \(dataKey) ")
+            
+            // For each key in keyArray, get all elements and create a Dictinary item
+            for i in keyArray {
+              for (_, things) in obj {
+                // if things[key].string == i {
+                if String(describing: things[key].rawValue) == i  {
+                  keyItems.append(things[dataKey].stringValue)
+                }
+              } // end for loop
+              
+              keyItems = Array(Set(keyItems)).sorted()   // Remove Duplicates .... may not be necessary
+              myDict.updateValue(keyItems, forKey: i)   // add entry into Dictionary
+              keyItems.removeAll()   // clear our holding array
+            } // for i in keyArray
         
-        return myDict   // Return value of Dictionary
+          return myDict   // Return value of Dictionary
         
       } // end func
       
