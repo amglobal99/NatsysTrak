@@ -131,7 +131,7 @@ extension JsonConvertible  {
                     DDLogDebug("++++++++++++++++++++")
                     DDLogDebug("JOSN object : \(jsonObject) ")
                     
-                  
+                  /*
                     if let path = rootPath { // rootPath is not Nil
                         DDLogDebug("Path is \(path) " )
                         let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
@@ -153,6 +153,24 @@ extension JsonConvertible  {
                     } else {  // rootPath is nil
                       completionHandler(Result.success(jsonObject))
                     }
+                     */
+                     
+                    
+                     if let path = rootPath { // rootPath is not Nil
+                        DDLogDebug("Path is \(path) " )
+                        let nodeCount = path.count  // How many levels deep ? ( for example, ["employees","users"] is 2 levels
+                        var pathArr:[String] = []
+                        for i in 0..<nodeCount {
+                           pathArr.append(path[i])
+                        }
+                        let result = jsonObject[pathArr]
+                        DDLogDebug("result is \(result)")
+                        completionHandler(Result.success(result))
+                     } else {  // rootPath is nil
+                        completionHandler(Result.success(jsonObject))
+                     }
+                     
+                                          
                 
             }  // end Alamofire request
         

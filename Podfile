@@ -14,6 +14,8 @@ pod 'Eureka', '~> 2.0.1'
 pod 'CocoaLumberjack/Swift'
 pod 'SwiftSpinner'
 pod 'SwiftDate', '~> 4.0.14'
+pod 'Unbox'
+pod 'Wrap'
 end
 target 'NatsysTrakTests' do
 use_frameworks!
@@ -29,6 +31,8 @@ pod 'Eureka', '~> 2.0.1'
 pod 'CocoaLumberjack/Swift'
 pod 'SwiftSpinner'
 pod 'SwiftDate', '~> 4.0.14'
+pod 'Unbox'
+pod 'Wrap'
 end
 target 'NatsysTrakUITests' do
 use_frameworks!
@@ -44,4 +48,6 @@ pod 'Eureka', '~> 2.0.1'
 pod 'CocoaLumberjack/Swift'
 pod 'SwiftSpinner'
 pod 'SwiftDate', '~> 4.0.14'
+pod 'Unbox'
+pod 'Wrap'
 end

@@ -29,6 +29,8 @@ PODS:
   - SwiftDate (4.0.14)
   - SwiftSpinner (1.2.0)
   - SwiftyJSON (3.1.4)
+  - Unbox (2.4.0)
+  - Wrap (2.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -43,6 +45,8 @@ DEPENDENCIES:
   - SwiftDate (~> 4.0.14)
   - SwiftSpinner
   - SwiftyJSON
+  - Unbox
+  - Wrap
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -58,7 +62,9 @@ SPEC CHECKSUMS:
   SwiftDate: 4ef029fd3117cc287fe642658b9aca2217628976
   SwiftSpinner: 6892642232471da581ecb020a9150e07d17a954b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
+  Wrap: 731fe4fe3c2429c913a8252a17dbe8bb191e69e1
 
-PODFILE CHECKSUM: 4256e3ae534d0090348a79f4ac5e6b59bce30580
+PODFILE CHECKSUM: 87d2a1173c25db2eae9f9db0941037c92254e7e7
 
 COCOAPODS: 1.2.1
